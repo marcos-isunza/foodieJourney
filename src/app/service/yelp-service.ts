@@ -46,7 +46,7 @@ export class YelpServiceComponent {
   }
 
   getBusinessByLocation(geolocationPosition, category): Observable < Business[] > {
-    console.log(category + 'eexito');
+    console.log(category);
     let headers = new HttpHeaders().set('Authorization', this.apiKey);
     let searchParams = new HttpParams({
     fromObject: {
@@ -55,17 +55,23 @@ export class YelpServiceComponent {
         'categories': category,
         'limit': '6'
     }
+    if(category == 'american'){
+
+    }
 });
     return this._http.get < Business > (this._businessUrl + '?', {
         params: searchParams ,
         headers: headers
       })
-      //.do(data => console.log(data))
         .map(data => {
         console.log(data);
         return data;
       })
       .catch(this.handleError);
+  }
+
+  getAmericanBusiness(){
+
   }
 
   private handleError(err: HttpErrorResponse) {
