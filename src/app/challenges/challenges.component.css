@@ -1,0 +1,56 @@
+.custom-navbar {
+  background-color: #fe5240 !important;
+}
+
+.challenge-caption-text {
+  font-size: 12px;
+}
+
+.duration {
+  font-size: 13px;
+}
+
+.welcome-challenge {
+  font-size: 24px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-weight: normal;
+}
+
+.challenge-progress {
+  fill: rgb(221, 154, 154);
+  fill-opacity: 0.3;
+}
+
+.img-overlay-wrap {
+  position: relative;
+  display: inline-block;
+  /* <= shrinks container to image size */
+  transition: transform 150ms ease-in-out;
+}
+
+.img-overlay-wrap img {
+  /* <= optional, for responsiveness */
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-overlay-wrap svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+challenge-progress-text {
+  fill: #ebf4f4;
+}
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}

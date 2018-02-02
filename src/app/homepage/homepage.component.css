@@ -1,0 +1,155 @@
+body {
+  font-size: 16px;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.jumbotron {
+  background-image: url(../../assets/bg-img1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+}
+
+.main-style {
+  background: #fe2540;
+  color: white;
+}
+
+.main-section {
+  text-align: center;
+  padding-bottom: 20px;
+  height: 515px;
+}
+
+.main-section h1 {
+  padding: 60px 0 40px 0;
+  font-size: 40px;
+  color: #424242;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+.main-section h2 {
+  font-size: 28px;
+  color: #424242;
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 60px;
+  margin-bottom: 15px;
+}
+
+.services {
+  padding-top: 150px;
+  text-align: center;
+  height: 550px;
+  background-image: url(../../assets/bg-img2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.services h3 {
+  color: #4c4c4c;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6em;
+}
+
+.services i {
+  height: 150px;
+  width: 150px;
+  font-size: 44px;
+  padding: 50px;
+  border-radius: 50%;
+  background-color: #fe5240;
+  color: white;
+}
+
+.main-button {
+  width: 190px;
+  height: 53px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+  background-color: #fd513f;
+  border-radius: 0;
+  border-style: none;
+  font-size: 18px;
+}
+
+.main-button:hover {
+  background-color: #f1220d;
+  color: #f6f6f6;
+}
+
+.main-button:active {
+  background-color: #ff988d !important;
+  color: #f6f6f6 !important;
+}
+
+.discover-bar {
+  border: 2px black solid;
+  text-align: center;
+  color: white;
+  background-color: #000000;
+  opacity: 0.5;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.discover-bar h3 {
+  font-size: 20px;
+}
+
+#footer {
+  color: #424242;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 15px;
+}
+
+@media only screen and (max-width: 550px) {
+  .main-section h1 {
+    font-size: 2em;
+  }
+  .main-section h2 {
+    font-size: 1.2em;
+    padding-bottom: 20px;
+  }
+  .services {
+    padding-top: 5px;
+  }
+  .services h3 {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    padding: 0 15px;
+  }
+  .services i {
+    height: 80px;
+    width: 80px;
+    font-size: 30px;
+    padding: 25px 0;
+    border-radius: 50%;
+    background-color: #fe5240;
+    color: white;
+  }
+  #footer {
+    margin-top: 150px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .services {
+    padding-top: 35px;
+  }
+  .services h3 {
+    font-size: 1.1em;
+    margin-bottom: 35px;
+    padding: 0 15px;
+  }
+  .services i {
+    margin-top: 120px;
+  }
+  .discover-bar {
+    visibility: hidden;
+  }
+}
