@@ -1,0 +1,93 @@
+body {
+  background-color: #f7f7f7;
+}
+
+#slider {
+  overflow: hidden;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  30% {
+    left: 0;
+  }
+  33% {
+    left: -100%;
+  }
+  63% {
+    left: -100%;
+  }
+  66% {
+    left: -200%;
+  }
+  95% {
+    left: -200%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+#slider figure {
+  width: 300%;
+  position: relative;
+  animation: 9s slider infinite;
+}
+
+#slider figure:hover {
+  /*animation-play-state: paused; enable for pause on hover*/
+}
+
+#slider figure img {
+  width: 33.333333333%;
+  height: 350px;
+  float: left;
+}
+.fig-wrapper {
+  position: relative;
+}
+
+/* Bottom right text */
+
+.text-block {
+  position: absolute;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.business-info {
+  background-color: #f8f9fa;
+  height: 140px;
+  border: none;
+  border-radius: 0px;
+  padding-left: 20px;
+  padding-top: 15px;
+}
+.panel-open {
+  color: green;
+  font-family: 'simonson';
+}
+.panel-contact i a {
+  font-family: 'simonson';
+  font-size: 14px;
+}
+.box-container {
+  margin: 30px 0 30px;
+}
+
+.box-wrapper {
+  padding: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.navigation-btn {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: 'simonson';
+  font-weight: bolder;
+}
+.marked {
+  width: 70%;
+}
