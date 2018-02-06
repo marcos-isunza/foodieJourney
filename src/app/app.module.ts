@@ -40,7 +40,6 @@ import { TeamComponent } from './team/team.component';
     {path: 'challenges', component: ChallengesComponent},
     {path: 'home', component: HomepageComponent},
     {path: 'businesses/:ctg', component: BusinessesComponent},
-    {path: 'team', component: TeamComponent},
     {path: ' ', redirectTo: 'home', pathMatch: 'full'},
     {path: '**', redirectTo: 'home', pathMatch: 'full'}
     ])
