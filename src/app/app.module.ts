@@ -15,6 +15,7 @@ import { ChallengesComponent } from './challenges/challenges.component';
 import { BusinessesComponent } from './businesses/businesses.component';
 import { DetailsComponent } from './details/details.component';
 import {RouterModule} from '@angular/router';
+import { TeamComponent } from './team/team.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {RouterModule} from '@angular/router';
     HomepageComponent,
     ChallengesComponent,
     BusinessesComponent,
-    DetailsComponent
+    DetailsComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,7 @@ import {RouterModule} from '@angular/router';
     {path: 'challenges', component: ChallengesComponent},
     {path: 'home', component: HomepageComponent},
     {path: 'businesses/:ctg', component: BusinessesComponent},
+    {path: 'team', component: TeamComponent},
     {path: ' ', redirectTo: 'home', pathMatch: 'full'},
     {path: '**', redirectTo: 'home', pathMatch: 'full'}
     ])
