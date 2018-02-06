@@ -15,6 +15,9 @@ import { ChallengesComponent } from './challenges/challenges.component';
 import { BusinessesComponent } from './businesses/businesses.component';
 import { DetailsComponent } from './details/details.component';
 import {RouterModule} from '@angular/router';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { RatingComponent } from './rating/rating.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,8 @@ import {RouterModule} from '@angular/router';
     HomepageComponent,
     ChallengesComponent,
     BusinessesComponent,
-    DetailsComponent
+    DetailsComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
@@ -38,9 +42,11 @@ import {RouterModule} from '@angular/router';
     {path: 'challenges', component: ChallengesComponent},
     {path: 'home', component: HomepageComponent},
     {path: 'businesses/:ctg', component: BusinessesComponent},
+    {path: 'details/:id', component: DetailsComponent},
     {path: ' ', redirectTo: 'home', pathMatch: 'full'},
     {path: '**', redirectTo: 'home', pathMatch: 'full'}
-    ])
+    ]),
+    NgbModule.forRoot(),
   ],
   providers: [{provide: BrowserXhr, useClass:CustExtBrowserXhr}],
   bootstrap: [AppComponent]
