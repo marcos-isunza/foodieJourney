@@ -1,0 +1,12 @@
+.crop {
+  overflow: hidden;
+  float: left;
+}
+
+div {
+  cursor: pointer;
+}
+.stars {
+  width: 120px;
+  color: goldenrod;
+}
