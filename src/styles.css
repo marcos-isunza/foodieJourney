@@ -1,1 +1,43 @@
+@font-face {
+  font-family: simonson;
+  src: url(./assets/Mark_Simonson_Regular.ttf);
+}
+
+
+/* You can add global styles to this file, and also import other style files */
+.navbar{
+  padding: 1em;
+  color: white;
+  background-color:#fd513f
+  ;
+  width:100%;
+}
+
+body{
+  background-color: #F2F2F2 !important;
+}
+
+.navbar a {
+  color:white ;
+}
+
+.navbar a:hover {
+  color:rgb(252, 140, 128) ;
+}
+.login_in{
+  width: 100%;
+}
+
+
+#btn_login{
+  width: 100%;
+  background-color: #fd513f;
+border-radius: 0;
+  border-style: none;
+  color: white;
+font-size: 18px;
+}
+
+
+
 

@@ -18,7 +18,7 @@ import {
 })
 export class AppComponent implements OnInit {
   title = 'app';
-
+  display = 'none';
   constructor(private _businessService: YelpServiceComponent) {}
 
   // business: Business[] = [];
@@ -26,7 +26,16 @@ export class AppComponent implements OnInit {
 
   // geolocationPosition = {};
   // category = 'Mexican';
-
+  handle_prueba(){
+    console.log("Hola");
+  
+  }
+    open() {
+      this.display='block'; 
+    }
+    onCloseHandled(){
+      this.display='none'; 
+    }
   ngOnInit(): void {
 
         //get Geolocation

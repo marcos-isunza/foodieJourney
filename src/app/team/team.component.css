@@ -1,0 +1,239 @@
+#equipo{
+	width: 100%;
+	background-size: cover;	
+	padding: 0%;
+	margin: 0%;
+	}
+
+.container{
+	padding: 0%;
+	margin: 0%;
+}
+.content{
+	background-color: black;
+    background-repeat: no-repeat;
+	background-position: cover; 
+	overflow: hidden;
+}
+
+
+.boton{
+	margin: auto;
+	background-color: black;
+	height: 100px;
+	width: auto;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid #37ddcf;
+	color:  rgb(216, 216, 216);
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	letter-spacing: 3px;
+	display: inline-block;
+	margin-bottom: 20px;
+	padding-left: 5%;
+	padding-right: 5%;
+	border-radius: 5px;
+}
+
+.boton:hover{
+	background-color: #37ddcf;
+	color: rgb(209, 27, 66);
+	font-weight: bolder;
+}
+
+.takeback{
+	margin: auto;
+	background-color: black;
+	height: 50px;
+	width: auto;
+	text-align: center;
+	text-decoration: underline;
+	border: none;
+	color: rgb(209, 27, 66);
+	font-family: 'Lato', sans-serif;
+	letter-spacing: 1px;
+}
+
+.a:link{
+	color: rgb(209, 27, 66);
+}
+
+.a:active{
+	color: rgb(209, 27, 66);
+}
+
+.a:hover{
+	color: rgb(236, 62, 86);
+}
+
+.six{
+	width: 30%;
+	overflow: hidden;
+	position: relative;
+	padding: 20px;
+}
+
+#logo{
+	width: 40%;
+	height: auto;
+	margin: auto;
+	display: inline-block;
+}
+
+#meet{
+	font-size: 40px;
+	letter-spacing: 8px;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	color: rgb(216, 216, 216);
+	margin-top: -10%;
+	position: relative;
+
+}
+
+#descripcion{
+	font-size: 20px;
+	width: 60%;
+	margin: auto;
+	letter-spacing: 1px;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	color: rgb(150, 150, 150);
+	padding-top: 3%;
+}
+
+
+
+.vl {
+    border-left: 1px solid rgb(209, 27, 66);
+    height: 300px;
+    position: relative;
+    left: 50%;
+	margin-left: -3px;
+	margin-bottom: 30px;
+
+}	
+
+h3{
+	font-family: 'Rubik', sans-serif;
+	color: #37ddcf;
+	font-size: 20px;
+
+}
+
+h4{
+	font-size: 14px;
+	color:rgb(117, 117, 117);
+	letter-spacing: .1px;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+}
+
+p{
+    font-size: 18px;
+	width: 60%;
+	margin: auto;
+	letter-spacing: 1px;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+    color: rgb(150, 150, 150);
+    padding-bottom: 3%;
+}
+
+#small{
+	font-size: 12px;
+	color: #37ddcf;
+    letter-spacing: 3px;
+    text-align: center;
+}
+/////////////////////////////////////////////////
+
+.row{
+	width: 70%;
+}
+
+.right{
+	width: 80%;
+	height: 30% static;
+	text-align: right;
+	margin-top: 15%;
+	display: inline-block;
+	margin-left: 10%;
+}
+
+.circle-right{	
+		background-image: url("http://www.math.uni-frankfurt.de/~person/_4170854.jpg");
+		background-size: 100px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		height:100px;
+		width: 100px;
+		border-radius: 50%;
+		float: right;
+		filter: contrast(120%) grayscale(100%) drop-shadow(0px 0px 30px rgba(196, 253, 255, 0.459)); 
+}
+
+.circle-left{	
+	background-image: url("http://www.math.uni-frankfurt.de/~person/_4170854.jpg");
+	background-size: 100px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height:100px;
+	width: 100px;
+	border-radius: 50%;
+	float: left;
+	filter: contrast(120%) grayscale(100%) drop-shadow(0px 0px 30px rgba(196, 253, 255, 0.459));
+
+}
+
+.circle-left:hover{
+	filter: drop-shadow(0px 0px 30px #37ddcf) 
+			contrast(120%);
+}
+
+.circle-right:hover{
+	filter: drop-shadow(0px 0px 30px #37ddcf) 
+			contrast(120%);
+}
+
+.text-right{
+	width: 60%;
+	float: left;
+	padding-right: 8%;
+}
+
+.text-left{
+	float: right;
+	width: 60%;
+	padding-left: 8%;
+}
+
+#marcos{
+	background-image: url("../../assets/fotosequipo/marcos.jpg");
+}
+
+#ana{
+	background-image: url("../../assets/fotosequipo/ana.png");
+}
+
+#orlando{
+	background-image: url("../../assets/fotosequipo/orlando.png");
+}
+
+#eli{
+	background-image: url("../../assets/fotosequipo/eli.jpg");
+}
+
+#edgar{
+	background-image: url("../../assets/fotosequipo/edgar.jpg");
+}
+
+#lorena{
+	background-image: url("../../assets/fotosequipo/lorena.jpg");
+}
+
+
+

@@ -1,15 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Nerby Business according to your location</h2>
+<!-- <h2>Nerby Business according to your location</h2>
 <p>latitide: {{geolocationPosition.latitude}}</p>
-<p>longitude: {{geolocationPosition.longitude}}</p>
+<p>longitude: {{geolocationPosition.longitude}}</p> -->
 
-<div class="list-group " *ngFor="let business of business.businesses;">
+<!-- <div class="list-group " *ngFor="let business of business.businesses;">
   <a class="list-group-item active">
     <p>{{business.name}}</p>
     <p>{{business.display_phone}}</p>
@@ -24,4 +18,86 @@
     <pm-map [latitude]='business.coordinates.latitude' [longitude]='business.coordinates.longitude' [label]='business.name'></pm-map>
   </a>
 </div>
-<hr>
+<hr> -->
+
+<section id="cajatop">
+<div class="row" style="width: 100%; background-color: white;">
+  <div class="container">
+    <div class="topnav container" id="myTopnav">
+      <a href="businesses/american" class="active" (click)="f_click(1)" >American</a>
+      <a href="businesses/korean" (click)="f_click(2)">Korean</a>
+      <a href="businesses/italian" (click)="f_click(3)">Italian</a>
+      <a href="businesses/mexican" (click)="f_click(4)">Mexican</a>
+      <a href="businesses/japanese" (click)="f_click(5)">Japanese</a>
+      <a style="font-size:15px;" class="icon" (click)="myFunction()">&#9776;</a>
+
+    </div>
+    <br>
+    <br>
+    <div class="row col-md-12 col-sm-12 col-12" style="padding-bottom:5%">
+      <div class="row col-md-6 col-sm-12 col-12">
+        <div class="col-md-3 col-sm-3 col-3 circle"></div>
+        <div class="col-md-9 col-sm-9 col-9">
+          <span class="Challenge_name">{{TitleJournal}}</span>
+          <br>
+          <br>
+          <span class="Challenge_desc">One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely
+            new cooking styles</span>
+        </div>
+      </div>
+      <div class="row col-md-6 col-sm-12 col-12 text-right">
+        <div class="col-md-12 col-sm-6 col-6">
+          <span class="">Duration: 3 weeks</span>
+        </div>
+        <div class="col-md-12 col-sm-6 col-12">
+          <button class="btn_style btn btn-default">Follow</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<br>
+<div class="container">
+  <ngb-accordion [closeOthers]="true">
+    <br>
+    <ngb-panel id="{{'static-'+i}}" title="{{business.name}}" *ngFor="let business of business.businesses; let i= index">
+      <ng-template ngbPanelContent>
+        <div class="row">
+          <div class="col">
+            <p class="panel-name">{{business.name}}</p>
+            <pm-star [rating]='business.rating'></pm-star>
+            <span class="rev-count">{{business.review_count}} reviews</span>
+            <p class="panel-price">{{business.price}}</p>
+            <p class="panel-address">{{business.location.display_address[0]}}, {{business.location.display_address[1]}}, {{business.location.display_address[2]}}</p>
+          </div>
+          <div class="col">
+            <div class="thumbnail business-info">
+              <p class="panel-open"> {{business.is_closed | isOpen: business.is_closed}}</p>
+              <hr>
+              <p class="panel-contact">
+                <a href="tel:{{business.display_phone}}">{{business.display_phone}}</a>
+                <br>
+                <a href="{{business.url}}" target="_blank">{{business.name}} Yelp Link</a>
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="thumb-post">
+              <img src="{{business.image_url}}" alt="{{business.name}}" />
+            </div>
+          </div>
+          <div class="col">
+            <pm-map [latitude]='business.coordinates.latitude' [longitude]='business.coordinates.longitude' [label]='business.name'></pm-map>
+          </div>
+          <div class="col-1">
+            <a [routerLink]="['/details', business.id, category]">
+              <i class="fa fa-angle-right angle"></i>
+            </a>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-panel>
+    <br>
+  </ngb-accordion>
+</div>

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Calamares en salsa de tomate y vino tinto",
+    "description":
+      "Utiliza tu salsa de tomate o espagueti favorita. Este platillo puede servirse como guarnición, aperitivo o sobre pasta. Una receta de origen italiano."
+  },
+  {
+    "name": "Ñoquis (gnocchi) caseros",
+    "description":
+      "Una pasta italiana cuyo ingrediente principal es la papa. Disfrutalos con tu salsa italiana favorita."
+  },
+  {
+    "name": "Spaghetti a la boloñesa",
+    "description":
+      "La salsa boloñesa de este platillo lleva, además de los ingredientes tradicionales, tocino y champiñones picados."
+  },
+  {
+    "name": "Lasagna",
+    "description":
+      "Una mezcla de salchicha italiana y carne molida de res en una salsa de jitomate. La mezcla se alterna con hojas de lasagna, requesón y queso mozzarela."
+  },
+  {
+    "name": "Spaghetti con ajo y aceite de oliva",
+    "description":
+      "Simplemente espagueti con ajo y aceite de oliva, servido con un queso parmesano y un toque de chile."
+  },
+  {
+    "name": "Lasagna de espinacas y queso feta",
+    "description":
+      "¡Absolutamente deliciosa! Esta lasagna (o canelones, si prefieres) de espinaca y queso feta es rápida de hacer."
+  }
+]
