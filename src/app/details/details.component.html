@@ -1,7 +1,22 @@
+<div class="container">
+  <div class="row nav-dts">
+    <div class="col-md-6 col-md-offset-1" routerLink='/challenges'>
+      <i class="fa fa-arrow-left btn-link"></i>
+      <button type="button" class="btn btn-link nav-link">Journeys
+        <span> / {{businessObject.name}}</span>
+      </button>
+    </div>
+  </div>
+</div>
+
 <div class="container box-wrapper">
   <div class="row box-container">
-    <div class="col">
+    <div class="col-md-6">
+      <span class="step">1</span>
       <h2>{{businessObject.name}}</h2>
+    </div>
+    <div class="col-md-6">
+      <button class="btn btn-light btn-lg feedback">Leave Feedback</button>
     </div>
   </div>
   <div class="row box-container">
@@ -15,7 +30,9 @@
               </span>
             </figure>
             <div class="text-block">
-              <h4>{{businessObject.name}}</h4>
+              <h4>
+                {{businessObject.name}}
+              </h4>
               <pm-star [rating]='businessObject.rating'></pm-star>&nbsp;
               <span class="rev-count">{{businessObject.review_count}} reviews</span>
               <p>{{businessObject.price}}</p>
@@ -32,7 +49,8 @@
     <div class="col">
       <div class="row">
         <div class="col-9">
-          <p>{{businessObject.name}}</p>
+          <p class="recipe-name">{{selectedRecipe.name}}</p>
+          <p class="recipe-desc">{{selectedRecipe.description}}</p>
         </div>
         <div class="col-3">
           <div class="thumbnail business-info">

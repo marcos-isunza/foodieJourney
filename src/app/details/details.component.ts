@@ -28,6 +28,15 @@ export class DetailsComponent implements OnInit {
   businessObject = {};
   errorMessage: string;
   id = this._route.snapshot.paramMap.get('id');
+  category = this._route.snapshot.paramMap.get('type');
+  allRecipes = [];
+  selectedRecipe = {};
+
+selectRandomRecipe(){
+let index = Math.floor((Math.random() * this.allRecipes.length) + 1);
+this.selectedRecipe = this.allRecipes[index];
+console.log(this.selectedRecipe);
+}
 
   ngOnInit() {
     console.log(this.id);
@@ -35,6 +44,13 @@ export class DetailsComponent implements OnInit {
       .subscribe(business => {
           this.businessObject = business;
           console.log(this.businessObject);
+        },
+        error => this.errorMessage = < any > error);
+
+        this._businessService.getJsonRecipe(this.category)
+         .subscribe(recipes => {
+          this.allRecipes = recipes;
+          this.selectRandomRecipe();
         },
         error => this.errorMessage = < any > error);
   }

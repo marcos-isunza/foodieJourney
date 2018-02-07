@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h2>Nerby Business according to your location</h2>
+<!-- <h2>Nerby Business according to your location</h2>
 <p>latitide: {{geolocationPosition.latitude}}</p>
-<p>longitude: {{geolocationPosition.longitude}}</p>
+<p>longitude: {{geolocationPosition.longitude}}</p> -->
 
 <!-- <div class="list-group " *ngFor="let business of business.businesses;">
   <a class="list-group-item active">
@@ -60,14 +60,13 @@
 <div class="container">
   <ngb-accordion [closeOthers]="true">
     <br>
-    <ngb-panel id="static-1" title="{{business.name}}" *ngFor="let business of business.businesses;">
+    <ngb-panel id="{{'static-'+i}}" title="{{business.name}}" *ngFor="let business of business.businesses; let i= index">
       <ng-template ngbPanelContent>
         <div class="row">
           <div class="col">
-            <p class="panel-name">{{business.name}}</p>
+            <p class="panel-name">{{business.name}} - {{postNumber+1}}</p>
             <pm-star [rating]='business.rating'></pm-star>
             <span class="rev-count">{{business.review_count}} reviews</span>
-            <!-- <p class="panel-rating"> {{business.rating}} - {{business.review_count}}</p> -->
             <p class="panel-price">{{business.price}}</p>
             <p class="panel-address">{{business.location.display_address[0]}}, {{business.location.display_address[1]}}, {{business.location.display_address[2]}}</p>
           </div>
@@ -89,12 +88,9 @@
           </div>
           <div class="col">
             <pm-map [latitude]='business.coordinates.latitude' [longitude]='business.coordinates.longitude' [label]='business.name'></pm-map>
-            <a [routerLink]="['/details', business.id]">
-              <i class="fa fa-angle-right angle"></i>
-            </a>
           </div>
           <div class="col-1">
-            <a [routerLink]="['/details', business.id]">
+            <a [routerLink]="['/details', business.id, category]">
               <i class="fa fa-angle-right angle"></i>
             </a>
           </div>

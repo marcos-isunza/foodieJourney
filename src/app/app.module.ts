@@ -17,6 +17,7 @@ import { DetailsComponent } from './details/details.component';
 import {RouterModule} from '@angular/router';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { RatingComponent } from './rating/rating.component';
+import { TeamComponent } from './team/team.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { RatingComponent } from './rating/rating.component';
     ChallengesComponent,
     BusinessesComponent,
     DetailsComponent,
-    RatingComponent
+    RatingComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,7 @@ import { RatingComponent } from './rating/rating.component';
     {path: 'home', component: HomepageComponent},
     {path: 'businesses/:ctg', component: BusinessesComponent},
     {path: 'team', component: TeamComponent},
-    {path: 'details/:id', component: DetailsComponent},
+    {path: 'details/:id/:type', component: DetailsComponent},
     {path: ' ', redirectTo: 'home', pathMatch: 'full'},
     {path: '**', redirectTo: 'home', pathMatch: 'full'}
     ]),

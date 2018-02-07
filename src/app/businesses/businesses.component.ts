@@ -27,6 +27,11 @@ var_show1: boolean;
   business: Business[] = [];
   errorMessage: string;
   geolocationPosition = {};
+  postNumber = 0;
+  generatePostNumber(){
+
+    this.postNumber = this.postNumber +1;
+  }
 
  category = this._route.snapshot.paramMap.get('ctg');
   ngOnInit() {
@@ -38,6 +43,7 @@ var_show1: boolean;
                     this._businessService.getBusinessByLocation(this.geolocationPosition, this.category)
                     .subscribe(business => {
                       this.business = business;
+                      //this.generatePostNumber();
                     },
                     error => this.errorMessage = < any > error);
                     ;
