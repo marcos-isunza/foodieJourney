@@ -19,7 +19,6 @@ import {
 export class AppComponent implements OnInit {
   title = 'app';
   display = 'none';
-
   constructor(private _businessService: YelpServiceComponent) {}
 
   // business: Business[] = [];
@@ -27,7 +26,6 @@ export class AppComponent implements OnInit {
 
   // geolocationPosition = {};
   // category = 'Mexican';
-  //Odal inicia
   handle_prueba(){
     console.log("Hola");
   
@@ -38,8 +36,6 @@ export class AppComponent implements OnInit {
     onCloseHandled(){
       this.display='none'; 
     }
-  //Odal Fin
-
   ngOnInit(): void {
 
         //get Geolocation
