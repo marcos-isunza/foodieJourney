@@ -1,3 +1,68 @@
-<p>
-  details works!
-</p>
+<div class="container box-wrapper">
+  <div class="row box-container">
+    <div class="col">
+      <h2>{{businessObject.name}}</h2>
+    </div>
+  </div>
+  <div class="row box-container">
+    <div class="col">
+      <div class="row">
+        <div class="col-6">
+          <div id="slider">
+            <figure>
+              <span *ngFor="let photo of businessObject.photos">
+                <img src="{{photo}}">
+              </span>
+            </figure>
+            <div class="text-block">
+              <h4>{{businessObject.name}}</h4>
+              <pm-star [rating]='businessObject.rating'></pm-star>&nbsp;
+              <span class="rev-count">{{businessObject.review_count}} reviews</span>
+              <p>{{businessObject.price}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <pm-map [latitude]='businessObject.coordinates.latitude' [longitude]='businessObject.coordinates.longitude' [label]='businessObject.name'></pm-map>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row box-container">
+    <div class="col">
+      <div class="row">
+        <div class="col-9">
+          <p>{{businessObject.name}}</p>
+        </div>
+        <div class="col-3">
+          <div class="thumbnail business-info">
+            <p class="panel-open"> {{businessObject.is_closed | isOpen: businessObject.is_closed}}</p>
+            <hr>
+            <p class="panel-contact">
+              <i class="fa fa-phone">
+                <a href="tel:{{businessObject.display_phone}}">{{businessObject.display_phone}}</a>
+              </i>
+              <br>
+              <i class="fa fa-external-link">
+                <a href="{{businessObject.url}}" target="_blank">{{businessObject.name}} Yelp Link</a>
+              </i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container navigation-btn">
+  <div class="row">
+    <div class="col-md-3 text-center">
+      <button id="singlebutton" name="singlebutton" class="btn btn-lg">Previous</button>
+    </div>
+    <div class="col-md-6 text-center">
+      <button id="singlebutton" name="singlebutton" class="btn btn-danger btn-lg marked">Mark as Started</button>
+    </div>
+    <div class="col-md-3 text-center">
+      <button id="singlebutton" name="singlebutton" class="btn btn-light btn-lg">Next</button>
+    </div>
+  </div>
+</div>
