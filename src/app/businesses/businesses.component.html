@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<!-- <h2>Nerby Business according to your location</h2>
+<h2>Nerby Business according to your location</h2>
 <p>latitide: {{geolocationPosition.latitude}}</p>
-<p>longitude: {{geolocationPosition.longitude}}</p> -->
+<p>longitude: {{geolocationPosition.longitude}}</p>
 
 <!-- <div class="list-group " *ngFor="let business of business.businesses;">
   <a class="list-group-item active">
@@ -24,12 +24,12 @@
 <div class="row" style="width: 100%; background-color: white;">
   <div class="container">
     <div class="topnav container" id="myTopnav">
-      <a href="#home" class="active">American</a>
-      <a href="#news">Korean</a>
-      <a href="#contact">Italian</a>
-      <a href="#about">Mexican</a>
-      <a href="#contact">Japanese</a>
-      <a href="javascript:void(0);" style="font-size:15px;" class="icon" (click)="myFunction()">&#9776;</a>
+        <a class="active" (click)="f_click(1)" >American</a>
+        <a (click)="f_click(2)">Korean</a>
+        <a (click)="f_click(3)">Italian</a>
+        <a (click)="f_click(4)">Mexican</a>
+        <a (click)="f_click(5)">Japanese</a>
+        <a style="font-size:15px;" class="icon" (click)="myFunction()">&#9776;</a>
 
     </div>
     <br>
@@ -38,7 +38,7 @@
       <div class="row col-md-6 col-sm-12 col-12">
         <div class="col-md-3 col-sm-3 col-3 circle"></div>
         <div class="col-md-9 col-sm-9 col-9">
-          <span class="Challenge_name">American</span>
+          <span class="Challenge_name">{{TitleJournal}}</span>
           <br>
           <br>
           <span class="Challenge_desc">One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely
@@ -60,13 +60,14 @@
 <div class="container">
   <ngb-accordion [closeOthers]="true">
     <br>
-    <ngb-panel id="{{'static-'+i}}" title="{{business.name}}" *ngFor="let business of business.businesses; let i= index">
+    <ngb-panel id="static-1" title="{{business.name}}" *ngFor="let business of business.businesses;">
       <ng-template ngbPanelContent>
         <div class="row">
           <div class="col">
             <p class="panel-name">{{business.name}}</p>
             <pm-star [rating]='business.rating'></pm-star>
             <span class="rev-count">{{business.review_count}} reviews</span>
+            <!-- <p class="panel-rating"> {{business.rating}} - {{business.review_count}}</p> -->
             <p class="panel-price">{{business.price}}</p>
             <p class="panel-address">{{business.location.display_address[0]}}, {{business.location.display_address[1]}}, {{business.location.display_address[2]}}</p>
           </div>
@@ -88,9 +89,12 @@
           </div>
           <div class="col">
             <pm-map [latitude]='business.coordinates.latitude' [longitude]='business.coordinates.longitude' [label]='business.name'></pm-map>
+            <a [routerLink]="['/details', business.id]">
+              <i class="fa fa-angle-right angle"></i>
+            </a>
           </div>
           <div class="col-1">
-            <a [routerLink]="['/details', business.id, category]">
+            <a [routerLink]="['/details', business.id]">
               <i class="fa fa-angle-right angle"></i>
             </a>
           </div>
