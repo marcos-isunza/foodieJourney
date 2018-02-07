@@ -42,6 +42,7 @@ import { RatingComponent } from './rating/rating.component';
     {path: 'challenges', component: ChallengesComponent},
     {path: 'home', component: HomepageComponent},
     {path: 'businesses/:ctg', component: BusinessesComponent},
+    {path: 'team', component: TeamComponent},
     {path: 'details/:id', component: DetailsComponent},
     {path: ' ', redirectTo: 'home', pathMatch: 'full'},
     {path: '**', redirectTo: 'home', pathMatch: 'full'}
