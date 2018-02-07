@@ -52,7 +52,7 @@ export class YelpServiceComponent {
         'latitude': geolocationPosition.latitude,
         'longitude': geolocationPosition.longitude,
         'categories': category,
-        'limit': '6'
+        'limit': '5'
     }
 });
     return this._http.get < Business > (this._businessUrl + '?', {

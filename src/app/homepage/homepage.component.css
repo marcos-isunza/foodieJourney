@@ -2,10 +2,6 @@ body {
   font-size: 16px;
 }
 
-.navbar {
-  margin-bottom: 0px;
-}
-
 .jumbotron {
   background-image: url(../../assets/bg-img1.jpg);
   background-size: cover;
@@ -52,7 +48,7 @@ body {
 .services h3 {
   color: #4c4c4c;
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.6em;
+  font-size: 1.4em;
 }
 
 .services i {
@@ -91,13 +87,16 @@ body {
   color: white;
   background-color: #000000;
   opacity: 0.5;
-  position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: 0px;
+  position: absolute;
+  height: 50px;
 }
 
 .discover-bar h3 {
   font-size: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 #footer {
@@ -107,6 +106,26 @@ body {
   margin-top: 15px;
 }
 
+/* Media queries for tablet */
+@media only screen and (max-width: 900px) {
+  .services {
+    padding-top: 35px;
+  }
+  .services h3 {
+    font-size: 1.1em;
+    margin-bottom: 35px;
+    padding: 0 15px;
+  }
+  .services i {
+    margin-top: 90px;
+  }
+  .discover-bar {
+    visibility: hidden;
+  }
+}
+
+
+/* Media queries for mobile views */
 @media only screen and (max-width: 550px) {
   .main-section h1 {
     font-size: 2em;
@@ -122,41 +141,27 @@ body {
     font-size: 0.9em;
     margin-bottom: 5px;
     padding: 0 15px;
+    margin-top: 10px;
   }
   .services i {
-    height: 80px;
-    width: 80px;
+    height: 85px;
+    width: 85px;
     font-size: 30px;
-    padding: 25px 0;
+    padding: 28px 0;
     border-radius: 50%;
     background-color: #fe5240;
     color: white;
+    margin-top: 30px;
   }
   #footer {
-    margin-top: 150px;
+    margin-top: 20px;
   }
-}
 
-@media only screen and (max-width: 900px) {
   .services {
-    padding-top: 35px;
-  }
-  .services h3 {
-    font-size: 1.1em;
-    margin-bottom: 35px;
-    padding: 0 15px;
-  }
-  .services i {
-    margin-top: 120px;
-  }
-  .discover-bar {
-    visibility: hidden;
+    height: auto;
   }
 }
 
-#logo{
-	width: 20%;
-	height: auto;
-	margin: auto;
-	display: inline-block;
+#id{
+  width: 40px;
 }
