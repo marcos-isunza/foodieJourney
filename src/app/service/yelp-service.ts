@@ -29,6 +29,7 @@ export class YelpServiceComponent {
   private apiKey2 = 'Bearer ' + 'PmE9JqxgeY4KHerH0cr2M-Alyz2OH9rQ426kjiM7z84Yd07Rp1c0-RlLmptVWOSR4Ekl3mN1WxrXq1bOEQAY80JCOaWnCnF6K7ytvS4wklNtKaxq_5M9m7Ntf0NyWnYx';
   private _businessUrl = 'https://api.yelp.com/v3/businesses/search';
   private _businessUrlId = 'https://api.yelp.com/v3/businesses/';
+  private _jsonRecipe ='./assets/recipes';
 
   constructor(private _http: HttpClient) {}
 
@@ -76,6 +77,13 @@ export class YelpServiceComponent {
         })
         .catch(this.handleError);
   }
+
+  getJsonRecipe(type): Observable<any[]>{
+    return this._http.get(this._jsonRecipe +'/' + type + '.json')
+    .do(data => console.log('All: ' + JSON.stringify(data)))
+    .catch(this.handleError);
+  }
+
 
   private handleError(err: HttpErrorResponse) {
     console.log(err);
