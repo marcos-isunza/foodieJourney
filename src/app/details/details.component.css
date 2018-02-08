@@ -79,6 +79,7 @@ body {
 }
 
 .box-wrapper {
+  background-color: white;
   padding: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -123,7 +124,7 @@ body {
   /* your font family here! */
   font-size: 16px;
   font-weight: bold;
-  color: #860000;
+  color: #fe5240;
   font-style: bolder;
 }
 span.step {
@@ -139,7 +140,7 @@ span.step {
   text-align: center;
   width: 1.6em;
   font-size: 1.5em;
-  float: left;
+  float:left;
 }
 
 .recipe-name {
