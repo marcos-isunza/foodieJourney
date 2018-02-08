@@ -2,6 +2,11 @@ body {
   margin: 0;
 }
 
+.topnav{
+  padding-top: 20px;
+  width: 100%;
+} 
+
 /deep/ .card-header:first-child a:-webkit-any-link {
   color: black;
 }
@@ -94,7 +99,6 @@ body {
   background-color: #fd513f;
   color: white;
   border-radius: 0px;
-  width: 80%;
 }
 
 .business-info {
@@ -160,4 +164,8 @@ ngb-accordion .card {
   padding-left: 15px;
   clear: both;
   color: darkgray;
+}
+
+.row{
+  margin: 0%;
 }

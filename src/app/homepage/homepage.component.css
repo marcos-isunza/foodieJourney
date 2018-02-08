@@ -7,6 +7,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 0;
+  margin-top: -5%;
 }
 
 .main-style {
@@ -18,6 +19,7 @@ body {
   text-align: center;
   padding-bottom: 20px;
   height: 515px;
+  padding-top: 5%;
 }
 
 .main-section h1 {
@@ -162,3 +164,8 @@ body {
   }
 }
 
+#logo{
+    width: 30%;
+    height: auto;
+    margin: auto;
+}

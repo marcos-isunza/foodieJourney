@@ -1,0 +1,27 @@
+[
+    {
+      "name": "Salmon teriyaki lunch box",
+      "description":
+        "Salmon with homemade Teriyaki sauce, green salad, stir-fried clear noodles, fried rice and dumpling."
+    },
+    {
+      "name": "Tofu dolsot",
+      "description":
+        "Rice topped with tofu, mushrooms, bean sprouts, radishes, carrots, watercress and a fried egg in a sizzling stone bowl, usually mixed with red pepper paste, served with seaweed soup."
+    },
+    {
+      "name": "Woo tang",
+      "description":
+        "Korean cabbage soup with bean sprouts and green onions, served with rice, slightly spicy."
+    },
+    {
+      "name": "Spicy pork",
+      "description":
+        "This slices of pork tenderloin marinated with homemade spicy sauce, served with rice."
+    },
+    {
+      "name": "Dolsot Bibimbap",
+      "description":
+        "Rice topped with beef, mushrooms, bean sprouts, radishes, carrots, watercress and a fried egg in a sizzling stone bowl, served with seaweed soup, usually mixed with red pepper paste."
+    }
+  ]

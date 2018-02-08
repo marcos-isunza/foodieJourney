@@ -1,0 +1,27 @@
+[
+    {
+      "name": "Extra cheese burguer",
+      "description":
+        "Special veg burguer with Aallo Patty and cheese slice. Vegetable cabbage, tomato and onion. Sauces: Mayonnaise, tomato. "
+    },
+    {
+      "name": "Classic chicken wings",
+      "description":
+        "Wings are served with your choice of blew cheese, ranch, or lite ranch dressing on the side."
+    },
+    {
+      "name": "Meatball sandwich",
+      "description":
+         "Three large green will classic meatballs with marinara sauce. Topped with mozzarolla and parmesan on a toasted sor dough hoagie. "
+    },
+    {
+      "name": "Coconut chicken fingers",
+      "description":
+        "Chichen tenders with creole mustard mayo or plum sauce."
+    },
+    {
+      "name": "Hooters boneless chicken wings",
+      "description":
+        "Go boneless with easy to eat 100% breast meat. More chicken, less bone, lots of flavor."
+    }
+  ]
