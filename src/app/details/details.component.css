@@ -152,3 +152,48 @@ span.step {
   font-family: 'simonson';
   font-size: 14px;
 }
+
+
+/* Styles added by Edgar for mobile */
+@media only screen and (max-width: 550px) {
+  .feedback {
+      display: none !important;
+    }
+  .prev-button, .next-button {
+      display: none !important;
+    }
+
+  .started-button {
+      background-color: #fe5240;
+      color: #f7f7f7;
+      border-radius: 0%;
+      font-size: 1em;
+      width: 100%;
+      height: 55px;
+    }
+  
+   .started-container {
+      padding: 0;
+   }
+   .navigation-btn {
+     margin: 0;
+     margin-top: 30px;
+   }
+
+   #slider {
+     height: 140px;
+   }
+
+   .box-wrapper {
+     background-color: #FFF;
+   }
+
+   .business-title > h2 {
+     font-size: 1.6rem;
+   }
+
+   h4 {
+     font-size: 1.2rem;
+   }
+  }
+
