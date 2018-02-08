@@ -154,6 +154,36 @@ span.step {
   font-size: 14px;
 }
 
+.prev-button{
+  background-color: #555555;
+  color: #f2f2f2;
+  border-radius: 0%;
+  font-size: 1em;
+  width: 100%;
+  height: 55px;
+}
+
+.started-button {
+  background-color: #fe5240;
+  color: #f2f2f2;
+  border-radius: 0%;
+  font-size: 1em;
+  width: 100%;
+  height: 55px;
+}
+
+.next-button{
+  background-color: #f2f2f2;
+  color: #9aa5b1;
+  border-radius: 0%;
+  font-size: 1em;
+  width: 100%;
+  height: 55px;
+}
+
+.feedback {
+  visibility: hidden;
+}
 
 /* Styles added by Edgar for mobile */
 @media only screen and (max-width: 550px) {
