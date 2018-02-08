@@ -5,7 +5,6 @@
     height: 50px;
     display: inline-block;
     margin-left: -50em;
-    border-radius: 25px;
     background-color: #4a4a4a;
     text-align: center;
     text-decoration-color: none;
@@ -39,10 +38,6 @@
         font-size: 50px;
         text-decoration: none;
         color: rgb(255,255,255);     
-}
-
-.started:hover{
-        background-color: aquamarine;       
 }
 
 .next{
