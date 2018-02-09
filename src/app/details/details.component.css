@@ -79,6 +79,7 @@ body {
 }
 
 .box-wrapper {
+  background-color: white;
   padding: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -123,7 +124,7 @@ body {
   /* your font family here! */
   font-size: 16px;
   font-weight: bold;
-  color: #860000;
+  color: #fe5240;
   font-style: bolder;
 }
 span.step {
@@ -139,7 +140,7 @@ span.step {
   text-align: center;
   width: 1.6em;
   font-size: 1.5em;
-  float: left;
+  float:left;
 }
 
 .recipe-name {
@@ -152,3 +153,78 @@ span.step {
   font-family: 'simonson';
   font-size: 14px;
 }
+
+.prev-button{
+  background-color: #555555;
+  color: #f2f2f2;
+  border-radius: 0%;
+  font-size: 1em;
+  width: 100%;
+  height: 55px;
+}
+
+.started-button {
+  background-color: #fe5240;
+  color: #f2f2f2;
+  border-radius: 0%;
+  font-size: 1em;
+  width: 100%;
+  height: 55px;
+}
+
+.next-button{
+  background-color: #f2f2f2;
+  color: #9aa5b1;
+  border-radius: 0%;
+  font-size: 1em;
+  width: 100%;
+  height: 55px;
+}
+
+.feedback {
+  visibility: hidden;
+}
+
+/* Styles added by Edgar for mobile */
+@media only screen and (max-width: 550px) {
+  .feedback {
+      display: none !important;
+    }
+  .prev-button, .next-button {
+      display: none !important;
+    }
+
+  .started-button {
+      background-color: #fe5240;
+      color: #f7f7f7;
+      border-radius: 0%;
+      font-size: 1em;
+      width: 100%;
+      height: 55px;
+    }
+  
+   .started-container {
+      padding: 0;
+   }
+   .navigation-btn {
+     margin: 0;
+     margin-top: 30px;
+   }
+
+   #slider {
+     height: 140px;
+   }
+
+   .box-wrapper {
+     background-color: #FFF;
+   }
+
+   .business-title > h2 {
+     font-size: 1.6rem;
+   }
+
+   h4 {
+     font-size: 1.2rem;
+   }
+  }
+

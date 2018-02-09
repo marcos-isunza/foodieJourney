@@ -46,11 +46,11 @@
         </div>
       </div>
       <div class="row col-md-6 col-sm-12 col-12 text-right">
-        <div class="col-md-12 col-sm-6 col-6">
+        <div id="duration" class="col-md-12 col-sm-6 col-6">
           <span class="">Duration: 3 weeks</span>
         </div>
         <div class="col-md-12 col-sm-6 col-12">
-          <button class="btn_style btn btn-default">Follow</button>
+          <button id="follow" class="btn_style btn btn-default">Follow</button>
         </div>
       </div>
     </div>
@@ -60,6 +60,7 @@
 <br>
 <div class="container">
   <ngb-accordion [closeOthers]="true">
+    <br>
     <br>
     <ngb-panel id="{{'static-'+i}}" title="{{business.name}}" *ngFor="let business of business.businesses; let i= index">
       <ng-template ngbPanelContent>
@@ -101,3 +102,7 @@
     <br>
   </ngb-accordion>
 </div>
+<br>
+<br>
+<br>
+<br>
