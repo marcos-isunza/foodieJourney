@@ -9,6 +9,7 @@ body {
 
 /deep/ .card-header:first-child a:-webkit-any-link {
   color: black;
+  
 }
 
 /deep/ .card-header:first-child {
@@ -42,12 +43,21 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {
+  .topnav a {
     display: none;
   }
   .topnav a.icon {
-    float: right;
+    float: left;
+    display: none;
+  }
+  .selectResp {
     display: block;
+  }
+}
+
+@media screen and (min-width: 601px){
+  .selectResp {
+    display: none;
   }
 }
 
@@ -75,30 +85,52 @@ body {
   font-size: 15px;
 }
 
-.card {
-  border: none;
-  display: inline-block;
+/deep/ .card { 
+  margin-bottom: 10px;
 }
 
+.acomodar{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
   background-color: #cb3728;
-  display: inline-block;
+}
+.btn-outline-primary{
+  border: 0;
+  color: grey;
+}
+.dropdown-item{
+  margin: 2px;
+  border-color:rgb(179, 179, 179);
 }
 
-.btnRight {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
+.dropdown-item:hover{
+  background-color: rgb(179, 179, 179);
+  color: white;
+}
+
+.btn-outline-primary:hover{
+  background-color: rgba(201, 199, 199, 0.233);
+}
+
+.btnDure {
+  color: black;
+  background-color: #f2f2f2;
+  border-radius: 0px;
+  width: 100%;
+   
 }
 
 .btn_style {
   background-color: #fd513f;
   color: white;
   border-radius: 0px;
+  width: 100%;
+  
 }
 
 .business-info {
@@ -168,4 +200,14 @@ ngb-accordion .card {
 
 .row{
   margin: 0%;
+}
+
+.dropdown-menu{
+  border-radius: 0;
+}
+
+.show>.btn-outline-primary.dropdown-toggle{
+  color: grey;
+  background-color: white; 
+  border-color: white;
 }
