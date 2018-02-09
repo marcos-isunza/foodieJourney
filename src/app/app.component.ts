@@ -19,6 +19,7 @@ import {
 export class AppComponent implements OnInit {
   title = 'app';
   display = 'none';
+  logname = 'Log In';
   constructor(private _businessService: YelpServiceComponent) {}
 
   // business: Business[] = [];
@@ -56,5 +57,23 @@ export class AppComponent implements OnInit {
     // }
 
   }
+openNav() {
+    document.getElementById("mySidenav").style.width = "150px";
+    document.getElementById("main").style.marginLeft = "150px";
+}
 
+closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+
+logout(){
+  this.logname= 'Log Out';
+}
+
+login(){
+  if(this.logname =='Log Out'){
+    this.logname= 'Log In'
+  }
+}
 }

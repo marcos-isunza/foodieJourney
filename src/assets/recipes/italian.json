@@ -1,32 +1,27 @@
 [
   {
-    "name": "Calamares en salsa de tomate y vino tinto",
+    "name": "Squids in tomato sauce and red wine",
     "description":
-      "Utiliza tu salsa de tomate o espagueti favorita. Este platillo puede servirse como guarnición, aperitivo o sobre pasta. Una receta de origen italiano."
+      "Use your favorite tomato sauce or spaghetti, this dish can be served as a side dish, appetizer or pasta, a recipe of Italian origin."
   },
   {
-    "name": "Ñoquis (gnocchi) caseros",
+    "name": "Home gnocchi",
     "description":
-      "Una pasta italiana cuyo ingrediente principal es la papa. Disfrutalos con tu salsa italiana favorita."
+      "An Italian pasta whose main ingredient is potatoes, enjoy them with your favorite Italian sauce."
   },
   {
-    "name": "Spaghetti a la boloñesa",
+    "name": "Spaghetti Bolognese",
     "description":
-      "La salsa boloñesa de este platillo lleva, además de los ingredientes tradicionales, tocino y champiñones picados."
+      "The Bolognese sauce of this dish has, in addition to the traditional ingredients, bacon and chopped mushrooms."
   },
   {
-    "name": "Lasagna",
+    "name": "Spaghetti with garlic and olive oil",
     "description":
-      "Una mezcla de salchicha italiana y carne molida de res en una salsa de jitomate. La mezcla se alterna con hojas de lasagna, requesón y queso mozzarela."
+      "Simply spaghetti with garlic and olive oil, served with a parmesan cheese and a touch of chili."
   },
   {
-    "name": "Spaghetti con ajo y aceite de oliva",
+    "name": "Lasagna with spinach and feta cheese",
     "description":
-      "Simplemente espagueti con ajo y aceite de oliva, servido con un queso parmesano y un toque de chile."
-  },
-  {
-    "name": "Lasagna de espinacas y queso feta",
-    "description":
-      "¡Absolutamente deliciosa! Esta lasagna (o canelones, si prefieres) de espinaca y queso feta es rápida de hacer."
+      "Absolutely delicious! This lasagna (or cannelloni, if you prefer) of spinach and feta cheese is quick to make."
   }
 ]
