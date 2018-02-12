@@ -86,8 +86,11 @@
   <ngb-accordion [closeOthers]="true">
     <br>
     <br>
-    <ngb-panel id="{{'static-'+i}}" title="{{business.name}}" *ngFor="let business of business.businesses; let i= index">
-      <ng-template ngbPanelContent>
+    <ngb-panel id="{{'static-'+i}}" *ngFor="let business of business.businesses; let i= index">
+        <ng-template ngbPanelTitle>
+            <span><div class="orden">{{i+1}} </div> {{ business.name}}</span>
+          </ng-template>
+      <ng-template ngbPanelContent> 
         <div class="row">
           <div class="col">
             <p class="panel-name">{{business.name}}</p>

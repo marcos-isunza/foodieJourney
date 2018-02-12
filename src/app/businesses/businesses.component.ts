@@ -32,7 +32,6 @@ export class BusinessesComponent implements OnInit, OnChanges {
   geolocationPosition = {};
   postNumber = 0;
   generatePostNumber(){
-
     this.postNumber = this.postNumber +1;
   }
 
