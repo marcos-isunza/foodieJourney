@@ -14,7 +14,7 @@ import {NgbTabsetConfig} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./businesses.component.css'],
   providers: [NgbTabsetConfig]
 })
-export class BusinessesComponent implements OnInit {
+export class BusinessesComponent implements OnInit, OnChanges {
   TitleJournal;
   DescJournal;
   text_tittle: boolean;
@@ -25,6 +25,8 @@ export class BusinessesComponent implements OnInit {
   }
   display= 'none';
   hidden= 'block';
+  address:string;
+  p_disabled:boolean = false;
   business: Business[] = [];
   errorMessage: string;
   geolocationPosition = {};
@@ -34,6 +36,7 @@ export class BusinessesComponent implements OnInit {
   }
 
  category = this._route.snapshot.paramMap.get('ctg');
+ ngOnChanges(){}
   ngOnInit() {
     //get Geolocation
         if (window.navigator && window.navigator.geolocation) {
@@ -67,6 +70,7 @@ export class BusinessesComponent implements OnInit {
     switch(id) { 
       case 1: { 
         this.text_tittle = true;
+        this.address = "businesses/american";
         this.TitleJournal = "American";
           this.DescJournal = "One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles" 
         console.log(this.text_tittle);
@@ -74,6 +78,7 @@ export class BusinessesComponent implements OnInit {
       } 
       case 2: { 
         this.text_tittle = true;
+        this.address = "businesses/korean";
         this.TitleJournal = "Korean";
         this.DescJournal = "One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles" 
          break; 
@@ -88,7 +93,8 @@ export class BusinessesComponent implements OnInit {
         this.text_tittle = true;
         this.TitleJournal = "Mexican";
         this.DescJournal = "One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles" 
-         break; 
+        this._router.navigateByUrl('/businesses/mexican'); 
+        break; 
       }
       case 5: { 
         this.text_tittle = true;
