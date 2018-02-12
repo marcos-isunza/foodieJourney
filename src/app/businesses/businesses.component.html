@@ -21,41 +21,41 @@
 <hr> -->
 
 <section id="cajatop">
-<div class="row" style="width: 100%; background-color: white;">
-  <div class="container">
-    <div class="topnav container" id="myTopnav">
-      <a href="businesses/american" class="active" (click)="f_click(1)" >American</a>
-      <a href="businesses/korean" (click)="f_click(2)">Korean</a>
-      <a href="businesses/italian" (click)="f_click(3)">Italian</a>
-      <a href="businesses/mexican" (click)="f_click(4)">Mexican</a>
-      <a href="businesses/japanese" (click)="f_click(5)">Japanese</a>
-      <a style="font-size:15px;" class="icon" (click)="myFunction()">&#9776;</a>
+  <div class="row" style="width: 100%; background-color: white;">
+    <div class="container">
+      <div class="topnav container" id="myTopnav">
+        <a href="businesses/american" class="active" (click)="f_click(1)">American</a>
+        <a href="businesses/korean" (click)="f_click(2)">Korean</a>
+        <a href="businesses/italian" (click)="f_click(3)">Italian</a>
+        <a href="businesses/mexican" (click)="f_click(4)">Mexican</a>
+        <a href="businesses/japanese" (click)="f_click(5)">Japanese</a>
+        <a style="font-size:15px;" class="icon" (click)="myFunction()">&#9776;</a>
 
-    </div>
-    <br>
-    <br>
-    <div class="row col-md-12 col-sm-12 col-12" style="padding-bottom:5%">
-      <div class="row col-md-6 col-sm-12 col-12">
-        <div class="col-md-3 col-sm-3 col-3 circle"></div>
-        <div class="col-md-9 col-sm-9 col-9">
-          <span class="Challenge_name">{{TitleJournal}}</span>
-          <br>
-          <br>
-          <span class="Challenge_desc">One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely
-            new cooking styles</span>
-        </div>
       </div>
-      <div class="row col-md-6 col-sm-12 col-12 text-right">
-        <div id="duration" class="col-md-12 col-sm-6 col-6">
-          <span class="">Duration: 3 weeks</span>
+      <br>
+      <br>
+      <div class="row col-md-12 col-sm-12 col-12" style="padding-bottom:5%">
+        <div class="row col-md-6 col-sm-12 col-12">
+          <div class="col-md-3 col-sm-3 col-3 circle"></div>
+          <div class="col-md-9 col-sm-9 col-9">
+            <span class="Challenge_name">{{TitleJournal}}</span>
+            <br>
+            <br>
+            <span class="Challenge_desc">One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely
+              new cooking styles</span>
+          </div>
         </div>
-        <div class="col-md-12 col-sm-6 col-12">
-          <button id="follow" class="btn_style btn btn-default">Follow</button>
+        <div class="row col-md-6 col-sm-12 col-12 text-right">
+          <div id="duration" class="col-md-12 col-sm-6 col-6">
+            <span class="">Duration: 3 weeks</span>
+          </div>
+          <div class="col-md-12 col-sm-6 col-12">
+            <button id="follow" class="btn_style btn btn-default">Follow</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </section>
 <br>
 <div class="container">
@@ -85,14 +85,14 @@
           </div>
           <div class="col">
             <div class="thumb-post">
-              <img src="{{business.image_url}}" alt="{{business.name}}" />
+              <img src="{{(business.image_url)?business.image_url:defaultImage}}" alt="{{business.name}}" />
             </div>
           </div>
           <div class="col">
             <pm-map [latitude]='business.coordinates.latitude' [longitude]='business.coordinates.longitude' [label]='business.name'></pm-map>
           </div>
           <div class="col-1">
-            <a [routerLink]="['/details', business.id, category]">
+            <a [routerLink]="['/details', business.id, category, i]">
               <i class="fa fa-angle-right angle"></i>
             </a>
           </div>

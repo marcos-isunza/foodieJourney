@@ -1,73 +1,90 @@
 <div class="container">
-<h1 class="text-center text-lg-center welcome-challenge">Welcome! Choose a path to get started. </h1>
-<div class="row text-center text-lg-left">
-  <div class="col-lg-3 col-sm-6 portfolio-item">
-    <div class="card h-100">
-      <a [routerLink]="['/businesses', 'burgers']" class="img-overlay-wrap">
-        <img class="card-img-top" src="../../assets/01Boton.png" alt="">
-        <svg viewBox="0 0 200 200">
-          <rect width="60" height="110" class="challenge-progress" />
-          <text id="perc" x="85" y="90" class="challenge-progress-text">20%</text>
-        </svg>
-      </a>
-      <div class="card-body">
-        <p class="card-text challenge-caption-text">One characteristic of American cookingis the fusion of multiple ethnic or regional approaches into completely new
-          cooking styles.</p>
-        <p class="duration">
-          <strong>Duration: 3 weeks</strong>
-        </p>
+  <h1 class="text-center text-lg-center welcome-challenge">Welcome! Choose a path to get started. </h1>
+  <div class="row text-center text-lg-left">
+    <div class="col-lg-3 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <a [routerLink]="['/businesses', 'burgers']" class="img-overlay-wrap">
+          <img class="card-img-top" src="../../assets/01Boton.png" alt="">
+          <svg viewBox="0 0 200 200">
+            <rect [attr.width]="challengeWidth" height="110" class="challenge-progress" />
+            <text id="perc" x="85" y="90" class="challenge-progress-text">{{challengeProgress}}%</text>
+          </svg>
+        </a>
+        <div class="card-body">
+          <p class="card-text challenge-caption-text">One characteristic of American cookingis the fusion of multiple ethnic or regional approaches into completely new
+            cooking styles.</p>
+          <p class="duration">
+            <strong>Duration: 3 weeks</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <a [routerLink]="['/businesses', 'italian']" class="img-overlay-wrap">
+          <img class="card-img-top" src="../../assets/02Boton.png" alt="">
+          <svg viewBox="0 0 200 200">
+            <rect width="0" height="115" class="challenge-progress" />
+          </svg>
+        </a>
+        <div class="card-body">
+          <p class="card-text challenge-caption-text">An Italian meal is famous for its structure into several sections: the appetiser, pasta or rice dish, a meat course
+            and dolce dessert.</p>
+          <p class="duration">
+            <strong>Duration: 1 week</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <a [routerLink]="['/businesses', 'mexican']" class="img-overlay-wrap">
+          <img class="card-img-top" src="../../assets/03Boton.png" alt="">
+          <svg viewBox="0 0 200 200">
+            <rect width="0" height="115" class="challenge-progress" />
+          </svg>
+        </a>
+        <div class="card-body">
+          <p class="card-text challenge-caption-text">Known for its varied flavours and spices, the food of Mexico is a result of the Spanish conquistadores' interaction
+            with the Aztec culture.</p>
+          <p class="duration">
+            <strong>Duration: 2 weeks</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <a [routerLink]="['/businesses', 'japanese']" class="img-overlay-wrap">
+          <img class="card-img-top" src="../../assets/04Boton.png" alt="">
+          <svg viewBox="0 0 200 200">
+            <rect width="0" height="115" class="challenge-progress" />
+          </svg>
+        </a>
+        <div class="card-body">
+          <p class="card-text challenge-caption-text">In 2014, 14 restaurants in Tokio and Shonan maintain a Michelin three-stars raiting, the ultimate international
+            recognition in the culinary world.</p>
+          <p class="duration">
+            <strong>Duration: 3 weeks</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <a [routerLink]="['/businesses', 'korean']" class="img-overlay-wrap">
+          <img class="card-img-top" src="../../assets/04Boton.png" alt="">
+          <svg viewBox="0 0 200 200">
+            <rect width="0" height="115" class="challenge-progress" />
+          </svg>
+        </a>
+        <div class="card-body">
+          <p class="card-text challenge-caption-text">In 2014, 14 restaurants in Tokio and Shonan maintain a Michelin three-stars raiting, the ultimate international
+            recognition in the culinary world.</p>
+          <p class="duration">
+            <strong>Duration: 3 weeks</strong>
+          </p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-lg-3 col-sm-6 portfolio-item">
-    <div class="card h-100">
-      <a [routerLink]="['/businesses', 'italian']" class="img-overlay-wrap">
-        <img class="card-img-top" src="../../assets/02Boton.png" alt="">
-        <svg viewBox="0 0 200 200">
-          <rect width="0" height="115" class="challenge-progress" />
-        </svg>
-      </a>
-      <div class="card-body">
-        <p class="card-text challenge-caption-text">An Italian meal is famous for its structure into several sections: the appetiser, pasta or rice dish, a meat course
-          and dolce dessert.</p>
-        <p class="duration">
-          <strong>Duration: 1 week</strong>
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-3 col-sm-6 portfolio-item">
-    <div class="card h-100">
-      <a [routerLink]="['/businesses', 'mexican']" class="img-overlay-wrap">
-        <img class="card-img-top" src="../../assets/03Boton.png" alt="">
-        <svg viewBox="0 0 200 200">
-          <rect width="0" height="115" class="challenge-progress" />
-        </svg>
-      </a>
-      <div class="card-body">
-        <p class="card-text challenge-caption-text">Known for its varied flavours and spices, the food of Mexico is a result of the Spanish conquistadores' interaction
-          with the Aztec culture.</p>
-        <p class="duration">
-          <strong>Duration: 2 weeks</strong>
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-3 col-sm-6 portfolio-item">
-    <div class="card h-100">
-      <a [routerLink]="['/businesses', 'japanese']" class="img-overlay-wrap">
-        <img class="card-img-top" src="../../assets/04Boton.png" alt="">
-        <svg viewBox="0 0 200 200">
-          <rect width="0" height="115" class="challenge-progress" />
-        </svg>
-      </a>
-      <div class="card-body">
-        <p class="card-text challenge-caption-text">In 2014, 14 restaurants in Tokio and Shonan maintain a Michelin three-stars raiting, the ultimate international recognition
-          in the culinary world.</p>
-        <p class="duration">
-          <strong>Duration: 3 weeks</strong>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>

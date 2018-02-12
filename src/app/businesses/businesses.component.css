@@ -2,10 +2,10 @@ body {
   margin: 0;
 }
 
-.topnav{
+.topnav {
   padding-top: 20px;
   width: 100%;
-} 
+}
 
 /deep/ .card-header:first-child a:-webkit-any-link {
   color: black;
@@ -166,6 +166,6 @@ ngb-accordion .card {
   color: darkgray;
 }
 
-.row{
+.row {
   margin: 0%;
 }
