@@ -14,7 +14,7 @@ import {NgbTabsetConfig} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./businesses.component.css'],
   providers: [NgbTabsetConfig]
 })
-export class BusinessesComponent implements OnInit {
+export class BusinessesComponent implements OnInit, OnChanges {
   TitleJournal;
   DescJournal;
   text_tittle: boolean;
@@ -23,9 +23,10 @@ export class BusinessesComponent implements OnInit {
       config.justify = 'start';
       config.type = 'tabs';
   }
-
-var_show: boolean;
-var_show1: boolean;
+  display= 'none';
+  hidden= 'block';
+  address:string;
+  p_disabled:boolean = false;
   business: Business[] = [];
   errorMessage: string;
   geolocationPosition = {};
@@ -36,6 +37,7 @@ var_show1: boolean;
   }
 
  category = this._route.snapshot.paramMap.get('ctg');
+ ngOnChanges(){}
   ngOnInit() {
     //get Geolocation
         if (window.navigator && window.navigator.geolocation) {
@@ -53,10 +55,23 @@ var_show1: boolean;
             error => this.errorMessage = < any > error);
     }
   }
+  myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+  public hide(){
+    this.display ='block';
+    this.hidden = 'none';
+  }
   public f_click(id: number){
     switch(id) { 
       case 1: { 
         this.text_tittle = true;
+        this.address = "businesses/american";
         this.TitleJournal = "American";
           this.DescJournal = "One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles" 
         console.log(this.text_tittle);
@@ -64,6 +79,7 @@ var_show1: boolean;
       } 
       case 2: { 
         this.text_tittle = true;
+        this.address = "businesses/korean";
         this.TitleJournal = "Korean";
         this.DescJournal = "One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles" 
          break; 
@@ -78,7 +94,8 @@ var_show1: boolean;
         this.text_tittle = true;
         this.TitleJournal = "Mexican";
         this.DescJournal = "One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles" 
-         break; 
+        this._router.navigateByUrl('/businesses/mexican'); 
+        break; 
       }
       case 5: { 
         this.text_tittle = true;

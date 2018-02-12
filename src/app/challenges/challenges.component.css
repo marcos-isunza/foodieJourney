@@ -42,9 +42,11 @@
   left: 0;
 }
 
-challenge-progress-text {
+.challenge-progress-text {
   fill: #ebf4f4;
+  font-size: 12px;
 }
+
 body {
   padding-top: 54px;
 }
@@ -53,4 +55,9 @@ body {
   body {
     padding-top: 56px;
   }
+}
+
+#perc{
+  color: white;
+  border: 3px solid green;
 }

@@ -21,45 +21,70 @@
 <hr> -->
 
 <section id="cajatop">
-<div class="row" style="width: 100%; background-color: white;">
-  <div class="container">
-    <div class="topnav container" id="myTopnav">
-      <a href="businesses/american" class="active" (click)="f_click(1)" >American</a>
-      <a href="businesses/korean" (click)="f_click(2)">Korean</a>
-      <a href="businesses/italian" (click)="f_click(3)">Italian</a>
-      <a href="businesses/mexican" (click)="f_click(4)">Mexican</a>
-      <a href="businesses/japanese" (click)="f_click(5)">Japanese</a>
-      <a style="font-size:15px;" class="icon" (click)="myFunction()">&#9776;</a>
-
-    </div>
-    <br>
-    <br>
-    <div class="row col-md-12 col-sm-12 col-12" style="padding-bottom:5%">
-      <div class="row col-md-6 col-sm-12 col-12">
-        <div class="col-md-3 col-sm-3 col-3 circle"></div>
-        <div class="col-md-9 col-sm-9 col-9">
-          <span class="Challenge_name">{{TitleJournal}}</span>
-          <br>
-          <br>
-          <span class="Challenge_desc">One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely
-            new cooking styles</span>
-        </div>
+  <div class="row" style="width: 100%; background-color: white;">
+    <div class="container">
+      <div class="topnav container" id="myTopnav">
+          <div class="selectResp" style="float: left;">
+            <div class=""></div>
+              <div class="dropdown .selectResp d-inline-block">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                  <a href="businesses/american" class="active">American</a> 
+                  <a href="businesses/korean">Korean</a>
+                  <a href="businesses/italian">Italian</a>
+                  <a href="businesses/mexican">Mexican</a>
+                  <a href="businesses/japanese">Japanese</a>
+                </div>
+              </div>
+          </div>
+        <a href="businesses/american" class="active">American</a>
+        <a href="businesses/korean">Korean</a>
+        <a href="businesses/italian">Italian</a>
+        <a href="businesses/mexican">Mexican</a>
+        <a href="businesses/japanese">Japanese</a>
+        <a style="font-size:15px;" class="icon" (click)="myFunction()">&#9776;</a>
+        <div style="float: right;">
+            <div ngbDropdown class="d-inline-block">
+              <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Most Recent </button>
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button class="dropdown-item">Most Recent</button>
+                <button class="dropdown-item">Highest Rated</button>
+                <button class="dropdown-item">Top Reviewed</button>
+              </div>
+            </div>
+          </div>
       </div>
-      <div class="row col-md-6 col-sm-12 col-12 text-right">
-        <div class="col-md-12 col-sm-6 col-6">
-          <span class="">Duration: 3 weeks</span>
-        </div>
-        <div class="col-md-12 col-sm-6 col-12">
-          <button class="btn_style btn btn-default">Follow</button>
-        </div>
+    
+  <div class="row col-md-12 col-sm-12 col-12 acomodar">
+    <div class="row col-md-6 col-sm-12 col-12">
+      <div class="col-md-3 col-sm-3 col-3">
+        <label class="circle"></label>
+      </div>
+      <div class="col-md-9 col-sm-9 col-9">
+        <p class="Challenge_name">{{TitleJournal}}</p>
+        <p class="Challenge_desc">{{DescJournal}}
+        </p>
       </div>
     </div>
+    <div class="row col-md-6 col-sm-12 col-12">
+      <div class="col-md-8 col-sm-0 col-0"></div>
+      <div class="col-md-4 col-sm-6 col-12">
+        <button class="btnDure btn btn-default ">Duration: 3 weeks</button>
+      </div>
+      <div class="col-md-8 col-sm-0 col-0"></div>
+      <div class="col-md-4 col-sm-6 col-12">  
+        <button class="btn_style btn btn-default" [disabled]="p_disabled" [ngStyle]="{'display':hidden}"(click)='hide()'>Follow</button>
+        <button class="btn_style btn btn-default" [ngStyle]="{'display':display}">Continue</button>
+      </div>    
+    </div>
+  </div>
   </div>
 </div>
 </section>
 <br>
 <div class="container">
   <ngb-accordion [closeOthers]="true">
+    <br>
     <br>
     <ngb-panel id="{{'static-'+i}}" title="{{business.name}}" *ngFor="let business of business.businesses; let i= index">
       <ng-template ngbPanelContent>
@@ -101,3 +126,7 @@
     <br>
   </ngb-accordion>
 </div>
+<br>
+<br>
+<br>
+<br>
