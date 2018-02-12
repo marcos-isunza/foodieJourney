@@ -23,9 +23,8 @@ export class BusinessesComponent implements OnInit {
     config.justify = 'start';
     config.type = 'tabs';
   }
-
-  var_show: boolean;
-  var_show1: boolean;
+  display = 'none';
+  hidden = 'block';
   business: Business[] = [];
   errorMessage: string;
   geolocationPosition = {};
@@ -53,6 +52,18 @@ export class BusinessesComponent implements OnInit {
             }, error => (this.errorMessage = <any>error));
       }, error => (this.errorMessage = <any>error));
     }
+  }
+  myFunction() {
+    var x = document.getElementById('myTopnav');
+    if (x.className === 'topnav') {
+      x.className += ' responsive';
+    } else {
+      x.className = 'topnav';
+    }
+  }
+  public hide() {
+    this.display = 'block';
+    this.hidden = 'none';
   }
   public f_click(id: number) {
     switch (id) {

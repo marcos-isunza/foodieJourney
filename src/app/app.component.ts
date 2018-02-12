@@ -73,7 +73,17 @@ logout(){
 
 login(){
   if(this.logname =='Log Out'){
-    this.logname= 'Log In'
+    this.logname= 'Log In';
   }
 }
 }
+
+// start(){
+//   if(this.logname == 'Log In'){
+//     open();
+//   }
+//   else{
+//     [routerLink]="['/challenges']"
+//   }
+// }
+// }

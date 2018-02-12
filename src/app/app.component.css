@@ -29,8 +29,7 @@ body{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #fd513f;
-    opacity: 0.5;
+    background-color: #cb3729;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -39,10 +38,11 @@ body{
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color:white;
     display: block;
     transition: 0.3s;
+    font-style: 'ProximaNova', sans-serif;
 }
 
 .sidenav a:hover {
