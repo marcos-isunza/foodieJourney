@@ -2,14 +2,13 @@ body {
   margin: 0;
 }
 
-.topnav{
+.topnav {
   padding-top: 20px;
   width: 100%;
-} 
+}
 
 /deep/ .card-header:first-child a:-webkit-any-link {
   color: black;
-  
 }
 
 /deep/ .card-header:first-child {
@@ -55,7 +54,7 @@ body {
   }
 }
 
-@media screen and (min-width: 601px){
+@media screen and (min-width: 601px) {
   .selectResp {
     display: none;
   }
@@ -85,35 +84,38 @@ body {
   font-size: 15px;
 }
 
-/deep/ .card { 
+/deep/ .card {
   margin-bottom: 10px;
 }
 
-.acomodar{
+.acomodar {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
 .circle {
   width: 80px;
   height: 80px;
   border-radius: 40px;
   background-color: #cb3728;
 }
-.btn-outline-primary{
+
+.btn-outline-primary {
   border: 0;
   color: grey;
 }
-.dropdown-item{
+
+.dropdown-item {
   margin: 2px;
-  border-color:rgb(179, 179, 179);
+  border-color: rgb(179, 179, 179);
 }
 
-.dropdown-item:hover{
+.dropdown-item:hover {
   background-color: rgb(179, 179, 179);
   color: white;
 }
 
-.btn-outline-primary:hover{
+.btn-outline-primary:hover {
   background-color: rgba(201, 199, 199, 0.233);
 }
 
@@ -122,7 +124,6 @@ body {
   background-color: #f2f2f2;
   border-radius: 0px;
   width: 100%;
-   
 }
 
 .btn_style {
@@ -130,7 +131,6 @@ body {
   color: white;
   border-radius: 0px;
   width: 100%;
-  
 }
 
 .business-info {
@@ -173,6 +173,7 @@ body {
   font-size: 12px;
   font-weight: bolder;
 }
+
 .panel-open {
   color: green;
 }
@@ -185,11 +186,13 @@ body {
 ngb-accordion .card {
   margin-bottom: 30px;
 }
+
 .rev-count {
   clear: both;
   padding-left: 15px;
   color: darkgray;
 }
+
 .angle {
   font-size: 48px;
   padding-top: 55px;
@@ -198,22 +201,22 @@ ngb-accordion .card {
   color: darkgray;
 }
 
-.row{
+.row {
   margin: 0%;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   border-radius: 0;
 }
 
-.show>.btn-outline-primary.dropdown-toggle{
+.show > .btn-outline-primary.dropdown-toggle {
   color: grey;
-  background-color: white; 
+  background-color: white;
   border-color: white;
 }
 
 .dropbtn {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -230,7 +233,7 @@ ngb-accordion .card {
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -241,7 +244,9 @@ ngb-accordion .card {
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -250,3 +255,16 @@ ngb-accordion .card {
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
 }
+
+.orden{
+  background-color: gray;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: white;
+  text-align: center;
+  vertical-align: text-top;
+  display: inline-block;
+  font-size: 13px;
+  }
+
