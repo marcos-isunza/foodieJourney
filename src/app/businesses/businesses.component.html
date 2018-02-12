@@ -24,19 +24,19 @@
   <div class="row" style="width: 100%; background-color: white;">
     <div class="container">
       <div class="topnav container" id="myTopnav">
-          <div class="selectResp" style="float: left;">
-            <div class=""></div>
-              <div class="dropdown .selectResp d-inline-block">
-                <button class="dropbtn">Dropdown</button>
-                <div class="dropdown-content">
-                  <a href="businesses/american" class="active">American</a> 
-                  <a href="businesses/korean">Korean</a>
-                  <a href="businesses/italian">Italian</a>
-                  <a href="businesses/mexican">Mexican</a>
-                  <a href="businesses/japanese">Japanese</a>
-                </div>
-              </div>
+        <div class="selectResp" style="float: left;">
+          <div class=""></div>
+          <div class="dropdown .selectResp d-inline-block">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+              <a href="businesses/american" class="active">American</a>
+              <a href="businesses/korean">Korean</a>
+              <a href="businesses/italian">Italian</a>
+              <a href="businesses/mexican">Mexican</a>
+              <a href="businesses/japanese">Japanese</a>
+            </div>
           </div>
+        </div>
         <a href="businesses/american" class="active">American</a>
         <a href="businesses/korean">Korean</a>
         <a href="businesses/italian">Italian</a>
@@ -53,27 +53,30 @@
             </div>
           </div>
         </div>
-      </div>    
-  <div class="row col-md-12 col-sm-12 col-12 acomodar">
-    <div class="row col-md-6 col-sm-12 col-12">
-      <div class="col-md-3 col-sm-3 col-3">
-        <label class="circle"></label>
       </div>
-      <div class="col-md-9 col-sm-9 col-9">
-        <p class="Challenge_name">{{TitleJournal}}</p>
-        <p class="Challenge_desc">{{DescJournal}}
-        </p>
-      </div>
-    </div>
-    <div class="row col-md-6 col-sm-12 col-12">
-      <div class="col-md-8 col-sm-0 col-0"></div>
-      <div class="col-md-4 col-sm-6 col-12">
-        <button class="btnDure btn btn-default ">Duration: 3 weeks</button>
-      </div>
-      <div class="col-md-8 col-sm-0 col-0"></div>
-      <div class="col-md-4 col-sm-6 col-12">  
-        <button class="btn_style btn btn-default" [disabled]="p_disabled" [ngStyle]="{'display':hidden}"(click)='hide()'>Follow</button>
-        <button class="btn_style btn btn-default" [ngStyle]="{'display':display}">Continue</button>
+
+      <div class="row col-md-12 col-sm-12 col-12 acomodar">
+        <div class="row col-md-6 col-sm-12 col-12">
+          <div class="col-md-3 col-sm-3 col-3">
+            <label class="circle"></label>
+          </div>
+          <div class="col-md-9 col-sm-9 col-9">
+            <p class="Challenge_name">{{TitleJournal}}</p>
+            <p class="Challenge_desc">{{DescJournal}}
+            </p>
+          </div>
+        </div>
+        <div class="row col-md-6 col-sm-12 col-12">
+          <div class="col-md-8 col-sm-0 col-0"></div>
+          <div class="col-md-4 col-sm-6 col-12">
+            <button class="btnDure btn btn-default ">Duration: 3 weeks</button>
+          </div>
+          <div class="col-md-8 col-sm-0 col-0"></div>
+          <div class="col-md-4 col-sm-6 col-12">
+            <button class="btn_style btn btn-default" [disabled]="p_disabled" [ngStyle]="{'display':hidden}" (click)='hide()'>Follow</button>
+            <button class="btn_style btn btn-default" [ngStyle]="{'display':display}">Continue</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -117,7 +120,7 @@
             <pm-map [latitude]='business.coordinates.latitude' [longitude]='business.coordinates.longitude' [label]='business.name'></pm-map>
           </div>
           <div class="col-1">
-            <a [routerLink]="['/details', business.id, category, i]">
+            <a [routerLink]="['/details', business.id, category]">
               <i class="fa fa-angle-right angle"></i>
             </a>
           </div>
