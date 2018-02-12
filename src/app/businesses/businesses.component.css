@@ -211,3 +211,15 @@ ngb-accordion .card {
   background-color: white; 
   border-color: white;
 }
+
+.orden{
+  background-color: gray;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: white;
+  text-align: center;
+  vertical-align: text-top;
+  display: inline-block;
+  font-size: 13px;
+}
