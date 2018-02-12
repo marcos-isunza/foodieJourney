@@ -23,10 +23,10 @@ export class BusinessesComponent implements OnInit, OnChanges {
     config.justify = 'start';
     config.type = 'tabs';
   }
-  display= 'none';
-  hidden= 'block';
-  address:string;
-  p_disabled:boolean = false;
+  display = 'none';
+  hidden = 'block';
+  address: string;
+  p_disabled: boolean = false;
 
   business: Business[] = [];
   errorMessage: string;
@@ -41,9 +41,7 @@ export class BusinessesComponent implements OnInit, OnChanges {
     localStorage.setItem('longitude', JSON.stringify(location['longitude']));
   }
 
-
- category = this._route.snapshot.paramMap.get('ctg');
- ngOnChanges(){}
+  ngOnChanges() {}
 
   ngOnInit() {
     //get Geolocation
