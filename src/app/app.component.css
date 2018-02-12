@@ -21,7 +21,6 @@ body{
 .navbar a:hover {
     color:rgb(252, 140, 128) ;
 }
-
 .sidenav {
     height: 100%;
     width: 0;
@@ -38,10 +37,11 @@ body{
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color:white;
     display: block;
     transition: 0.3s;
+    font-style: 'ProximaNova', sans-serif;
 }
 
 .sidenav a:hover {
@@ -101,7 +101,7 @@ body{
     width: 100%;
     padding: 3%;
     background-color: #fd513f;
-	border-radius: 0;
+	  border-radius: 0;
     border-style: none;
     color: white;
     font-size: 14px;
@@ -148,4 +148,5 @@ body{
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyhXa9W9zG1hoZFYXUBMeVXeFE5V3pnfrKQfSPl-EGUrqKnwMh');
     background-size: 60%;
     margin-left: 5%; 
+    font-size: 18px;
 }
