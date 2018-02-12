@@ -27,7 +27,8 @@ export class BusinessesComponent implements OnInit, OnChanges {
   hidden = 'block';
   address: string;
   p_disabled: boolean = false;
-
+  testcolor: string;
+  testTrue: boolean = true;
   business: Business[] = [];
   errorMessage: string;
   geolocationPosition = {};
@@ -57,6 +58,7 @@ export class BusinessesComponent implements OnInit, OnChanges {
             }, error => (this.errorMessage = <any>error));
       }, error => (this.errorMessage = <any>error));
     }
+    this.testCond(this.testTrue);
   }
   myFunction() {
     var x = document.getElementById('myTopnav');
@@ -66,9 +68,20 @@ export class BusinessesComponent implements OnInit, OnChanges {
       x.className = 'topnav';
     }
   }
+  public testCond (testTrue){
+    if(testTrue == false){
+      this.testcolor= 'gray';
+    }
+    else{
+
+    this.testcolor= '#2cb2ff';
+    }
+  }
+  
   public hide() {
     this.display = 'block';
     this.hidden = 'none';
+    console.log(this.category);
   }
   public f_click(id: number) {
     switch (id) {
