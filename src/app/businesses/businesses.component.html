@@ -77,57 +77,58 @@
         </div>
       </div>
     </div>
-    <!-- </section> -->
+  </div>
+</section>
+<br>
+<div class="container">
+  <ngb-accordion [closeOthers]="true">
     <br>
-    <div class="container">
-      <ngb-accordion [closeOthers]="true">
-        <br>
-        <br>
-        <ngb-panel id="{{'static-'+i}}" *ngFor="let business of business.businesses; let i= index">
-          <ng-template ngbPanelTitle>
-            <span>
-              <div class="orden">{{i+1}} </div> {{ business.name}}</span>
-          </ng-template>
-          <ng-template ngbPanelContent>
-            <div class="row">
-              <div class="col">
-                <p class="panel-name">{{business.name}}</p>
-                <pm-star [rating]='business.rating'></pm-star>
-                <span class="rev-count">{{business.review_count}} reviews</span>
-                <p class="panel-price">{{business.price}}</p>
-                <p class="panel-address">{{business.location.display_address[0]}}, {{business.location.display_address[1]}}, {{business.location.display_address[2]}}</p>
-              </div>
-              <div class="col">
-                <div class="thumbnail business-info">
-                  <p class="panel-open"> {{business.is_closed | isOpen: business.is_closed}}</p>
-                  <hr>
-                  <p class="panel-contact">
-                    <a href="tel:{{business.display_phone}}">{{business.display_phone}}</a>
-                    <br>
-                    <a href="{{business.url}}" target="_blank">{{business.name}} Yelp Link</a>
-                  </p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="thumb-post">
-                  <img src="{{(business.image_url)?business.image_url:defaultImage}}" alt="{{business.name}}" />
-                </div>
-              </div>
-              <div class="col">
-                <pm-map [latitude]='business.coordinates.latitude' [longitude]='business.coordinates.longitude' [label]='business.name'></pm-map>
-              </div>
-              <div class="col-1">
-                <a [routerLink]="['/details', business.id, category, i]">
-                  <i class="fa fa-angle-right angle"></i>
-                </a>
-              </div>
+    <br>
+    <ngb-panel id="{{'static-'+i}}" *ngFor="let business of business.businesses; let i= index">
+      <ng-template ngbPanelTitle>
+        <span>
+          <div class="orden">{{i+1}} </div> {{ business.name}}</span>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        <div class="row">
+          <div class="col">
+            <p class="panel-name">{{business.name}}</p>
+            <pm-star [rating]='business.rating'></pm-star>
+            <span class="rev-count">{{business.review_count}} reviews</span>
+            <p class="panel-price">{{business.price}}</p>
+            <p class="panel-address">{{business.location.display_address[0]}}, {{business.location.display_address[1]}}, {{business.location.display_address[2]}}</p>
+          </div>
+          <div class="col">
+            <div class="thumbnail business-info">
+              <p class="panel-open"> {{business.is_closed | isOpen: business.is_closed}}</p>
+              <hr>
+              <p class="panel-contact">
+                <a href="tel:{{business.display_phone}}">{{business.display_phone}}</a>
+                <br>
+                <a href="{{business.url}}" target="_blank">{{business.name}} Yelp Link</a>
+              </p>
             </div>
-          </ng-template>
-        </ngb-panel>
-        <br>
-      </ngb-accordion>
-    </div>
+          </div>
+          <div class="col">
+            <div class="thumb-post">
+              <img src="{{business.image_url}}" alt="{{business.name}}" />
+            </div>
+          </div>
+          <div class="col">
+            <pm-map [latitude]='business.coordinates.latitude' [longitude]='business.coordinates.longitude' [label]='business.name'></pm-map>
+          </div>
+          <div class="col-1">
+            <a [routerLink]="['/details', business.id, category, i]">
+              <i class="fa fa-angle-right angle"></i>
+            </a>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-panel>
     <br>
-    <br>
-    <br>
-    <br>
+  </ngb-accordion>
+</div>
+<br>
+<br>
+<br>
+<br>
