@@ -84,28 +84,28 @@ export class BusinessesComponent implements OnInit, OnChanges {
         this.text_tittle = true;
         this.TitleJournal = 'Korean';
         this.DescJournal =
-          'One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles';
+          'Korean cuisine has evolved through centuries of social and political change. Originating from ancient agricultural and nomadic traditions, Korean cuisine has evolved through a complex interaction of the natural environment and different cultural trends.';
         break;
       }
       case 3: {
         this.text_tittle = true;
         this.TitleJournal = 'Italian';
         this.DescJournal =
-          'One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles';
+          'An Italian meal is famous for its structure into several sections: the appetiser, pasta or rice dish, a meat course and dolce dessert.';
         break;
       }
       case 4: {
         this.text_tittle = true;
         this.TitleJournal = 'Mexican';
         this.DescJournal =
-          'One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles';
+          "Known for its varied flavours and spices, the food of Mexico is a result of the Spanish conquistadores' interaction with the Aztec culture.'";
         break;
       }
       case 5: {
         this.text_tittle = true;
         this.TitleJournal = 'Japanese';
         this.DescJournal =
-          'One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles';
+          'In 2014, 14 restaurants in Tokio and Shonan maintain a Michelin three-stars raiting, the ultimate international recognition in the culinary world.';
         break;
       }
     }

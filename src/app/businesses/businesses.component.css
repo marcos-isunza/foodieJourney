@@ -255,7 +255,8 @@ ngb-accordion .card {
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
 }
-.orden {
+
+.orden{
   background-color: gray;
   border-radius: 50%;
   width: 20px;
@@ -265,4 +266,5 @@ ngb-accordion .card {
   vertical-align: text-top;
   display: inline-block;
   font-size: 13px;
-}
+  }
+
