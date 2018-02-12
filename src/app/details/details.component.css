@@ -36,10 +36,6 @@ body {
   animation: 9s slider infinite;
 }
 
-#slider figure:hover {
-  /*animation-play-state: paused; enable for pause on hover*/
-}
-
 #slider figure img {
   width: 33.333333333%;
   height: 350px;
@@ -145,7 +141,6 @@ span.step {
   text-align: center;
   width: 1.6em;
   font-size: 1.5em;
-  float:left;
 }
 
 .recipe-name {
