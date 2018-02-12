@@ -10,7 +10,7 @@ import { NgbTabsetConfig } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./businesses.component.css'],
   providers: [NgbTabsetConfig]
 })
-export class BusinessesComponent implements OnInit {
+export class BusinessesComponent implements OnInit, OnChanges {
   TitleJournal;
   DescJournal;
   text_tittle: boolean;
@@ -23,8 +23,11 @@ export class BusinessesComponent implements OnInit {
     config.justify = 'start';
     config.type = 'tabs';
   }
-  display = 'none';
-  hidden = 'block';
+  display= 'none';
+  hidden= 'block';
+  address:string;
+  p_disabled:boolean = false;
+
   business: Business[] = [];
   errorMessage: string;
   geolocationPosition = {};
@@ -37,6 +40,10 @@ export class BusinessesComponent implements OnInit {
     localStorage.setItem('latitude', JSON.stringify(location['latitude']));
     localStorage.setItem('longitude', JSON.stringify(location['longitude']));
   }
+
+
+ category = this._route.snapshot.paramMap.get('ctg');
+ ngOnChanges(){}
 
   ngOnInit() {
     //get Geolocation
@@ -71,7 +78,7 @@ export class BusinessesComponent implements OnInit {
         this.text_tittle = true;
         this.TitleJournal = 'American';
         this.DescJournal =
-          'One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles';
+          'One characteristic of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles';
         console.log(this.text_tittle);
         break;
       }
