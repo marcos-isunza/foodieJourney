@@ -89,7 +89,7 @@
     <ngb-panel id="{{'static-'+i}}" *ngFor="let business of business.businesses; let i= index">
       <ng-template ngbPanelTitle>
         <span>
-          <div class="orden">{{i+1}} </div> {{ business.name}}</span>
+          <div (click)='testCond()'  [ngStyle]="{'background-color':testcolor}" class="orden">{{(testTrue)?'✓':i+1}} </div> {{ business.name}}</span>
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="row">
