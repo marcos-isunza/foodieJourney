@@ -120,7 +120,7 @@
             <pm-map [latitude]='business.coordinates.latitude' [longitude]='business.coordinates.longitude' [label]='business.name'></pm-map>
           </div>
           <div class="col-1">
-            <a [routerLink]="['/details', business.id, category]">
+            <a [routerLink]="['/details', business.id, category, i]">
               <i class="fa fa-angle-right angle"></i>
             </a>
           </div>
