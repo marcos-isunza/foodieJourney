@@ -21,24 +21,27 @@
         <button class="btn btn-light btn-lg feedback">Leave Feedback</button>
       </div>
     </div>
-    <div class="row box-container">
-      <div class="col">
-        <div class="row">
-          <div class="col-6">
-            <div id="slider">
-              <figure>
-                <span *ngFor="let photo of businessObject.photos">
-                  <img src="{{(photo)?photo:defaultImage}}">
-                </span>
-              </figure>
-              <div class="text-block">
-                <h4>
-                  {{businessObject.name}}
-                </h4>
-                <pm-star [rating]='businessObject.rating'></pm-star>&nbsp;
-                <span class="rev-count">{{businessObject.review_count}} reviews</span>
-                <p>{{businessObject.price}}</p>
+
+  </div>
+  <div class="row box-container">
+    <div class="col">
+      <div class="row">
+        <div class="col-6">
+          <div id="slider">
+            <figure>
+              <span *ngFor="let photo of businessObject.photos">
+                <img src="{{photo}}">
+              </span>
+            </figure>
+            <div class="text-block">
+              <h4>
+                {{businessObject.name}}
+              </h4>
+              <pm-star [rating]='businessObject.rating'></pm-star>&nbsp;
+              <span class="rev-count">{{businessObject.review_count}} reviews</span>
+              <p>{{businessObject.price}}</p>
               </div>
+
             </div>
           </div>
           <div class="col-6">
