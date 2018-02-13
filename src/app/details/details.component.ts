@@ -37,6 +37,15 @@ export class DetailsComponent implements OnInit {
   currentTimeout: number;
   defaultImage = '../../assets/no-image.jpg';
   template: string = `<img src="http://pa1.narvii.com/5722/2c617cd9674417d272084884b61e4bb7dd5f0b15_hq.gif" />`;
+  
+  //modal
+  open() {
+    this.display='block'; 
+  }
+  onCloseHandled(){
+    this.display='none'; 
+  }
+  //modal
 
   selectRandomRecipe() {
     let index = Math.floor(Math.random() * this.allRecipes.length + 1);
@@ -54,19 +63,19 @@ export class DetailsComponent implements OnInit {
   setChallengeComplete(challenge) {
     switch (challenge) {
       case 1:
-        localStorage.setItem('challenge1', 'true');
+        localStorage.setItem('challenge1-' + this.category, 'true');
         break;
       case 2:
-        localStorage.setItem('challenge2', 'true');
+        localStorage.setItem('challenge2-' + this.category, 'true');
         break;
       case 3:
-        localStorage.setItem('challenge3', 'true');
+        localStorage.setItem('challenge3-' + this.category, 'true');
         break;
       case 4:
-        localStorage.setItem('challenge4', 'true');
+        localStorage.setItem('challenge4-' + this.category, 'true');
         break;
       case 5:
-        localStorage.setItem('challenge5', 'true');
+        localStorage.setItem('challenge5-' + this.category, 'true');
         break;
       default:
         break;
