@@ -33,12 +33,49 @@ export class BusinessesComponent implements OnInit, OnChanges {
   geolocationPosition = {};
   postNumber = 0;
   defaultImage = '../../assets/no-image.jpg';
+  progress = 0;
+  isComplete1italian = false;
+  checkmark: string;
 
   category = this._route.snapshot.paramMap.get('ctg');
+
+  getTotalProgress() {
+    if (this.category == 'burgers') {
+      this.progress = +localStorage.getItem('totalProgressAmerican');
+    }
+    if (this.category == 'italian') {
+      this.progress = +localStorage.getItem('totalProgressItalian');
+    }
+    if (this.category == 'japanese') {
+      this.progress = +localStorage.getItem('totalProgressJapanese');
+    }
+    if (this.category == 'korean') {
+      this.progress = +localStorage.getItem('totalProgressKorean');
+    }
+    if (this.category == 'mexican') {
+      this.progress = +localStorage.getItem('totalProgressMexican');
+    }
+  }
 
   storeLocation(location) {
     localStorage.setItem('latitude', JSON.stringify(location['latitude']));
     localStorage.setItem('longitude', JSON.stringify(location['longitude']));
+  }
+
+  setComplete() {
+    for (let index = 0; index <= 5; index++) {
+      if (localStorage.getItem('challenge' + index + '-italian') === 'true') {
+        this.checkmark = '&#10004;';
+      }
+      if (localStorage.getItem('challenge' + index + '-mexican') === 'true') {
+      }
+      if (localStorage.getItem('challenge' + index + '-japanese') === 'true') {
+      }
+      if (localStorage.getItem('challenge' + index + '-korean') === 'true') {
+      }
+      if (localStorage.getItem('challenge' + index + '-burgers') === 'true') {
+      }
+    }
   }
 
   ngOnChanges() {}
@@ -57,7 +94,9 @@ export class BusinessesComponent implements OnInit, OnChanges {
             }, error => (this.errorMessage = <any>error));
       }, error => (this.errorMessage = <any>error));
     }
+    this.getTotalProgress();
   }
+
   myFunction() {
     var x = document.getElementById('myTopnav');
     if (x.className === 'topnav') {
