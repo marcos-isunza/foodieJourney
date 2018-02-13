@@ -24,7 +24,7 @@
   <div class="row" style="width: 100%; background-color: white;">
     <div class="container">
       <div class="topnav container" id="myTopnav">
-        <div class="selectResp" style="float: left;">
+        <div class="selectResp toLeft">
           <div class=""></div>
           <div class="dropdown .selectResp d-inline-block">
             <button class="dropbtn">Journeys  <i class="fa fa-sort-desc" aria-hidden="true"></i></button>
@@ -63,11 +63,8 @@
               <span>{{progress}}</span>
             </div>
           </div>
-          <div class="col-md-3 col-sm-3 col-3">
-            <span class="progress">{{progress}}%</span>
-          </div>
           <div class="col-md-9 col-sm-9 col-9">
-            <p class="Challenge_name">{{TitleJournal}}</p>
+            <p class="Challenge_name">{{TitleJournal}} <span class="progress">{{progress}}%</span></p>
             <p class="Challenge_desc">{{DescJournal}}
             </p>
           </div>
