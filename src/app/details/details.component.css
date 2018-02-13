@@ -89,6 +89,10 @@ body {
   width: 70%;
 }
 
+.bizzName {
+  display: inline;
+}
+
 .nav-link {
   font-family: 'simonson';
   color: #fe5240;
@@ -154,7 +158,7 @@ span.step {
   font-size: 14px;
 }
 
-.prev-button{
+.prev-button {
   background-color: #555555;
   color: #f2f2f2;
   border-radius: 0%;
@@ -172,7 +176,7 @@ span.step {
   height: 55px;
 }
 
-.next-button{
+.next-button {
   background-color: #f2f2f2;
   color: #9aa5b1;
   border-radius: 0%;
@@ -181,8 +185,7 @@ span.step {
   height: 55px;
 }
 
-
-.continue-button{
+.continue-button {
   background-color: #2cb2ff;
   color: #f2f2f2;
   border-radius: 0%;
@@ -191,8 +194,7 @@ span.step {
   height: 55px;
 }
 
-.go-button{
-  
+.go-button {
   color: #4a4a4a;
   border-radius: 0%;
   font-size: 1em;
@@ -200,12 +202,12 @@ span.step {
   height: 55px;
 }
 
-.letter1{
+.letter1 {
   font-size: small;
   color: #d1d9e0;
 }
 
-.letter2{
+.letter2 {
   font-size: small;
   color: #d1d9e0;
 }
@@ -213,43 +215,43 @@ span.step {
 /* Styles added by Edgar for mobile */
 @media only screen and (max-width: 550px) {
   .feedback {
-      display: none !important;
-    }
-  .prev-button, .next-button {
-      display: none !important;
-    }
-
-  .started-button {
-      background-color: #fe5240;
-      color: #f7f7f7;
-      border-radius: 0%;
-      font-size: 1em;
-      width: 100%;
-      height: 55px;
-    }
-  
-   .started-container {
-      padding: 0;
-   }
-   .navigation-btn {
-     margin: 0;
-     margin-top: 30px;
-   }
-
-   #slider {
-     height: 140px;
-   }
-
-   .box-wrapper {
-     background-color: #FFF;
-   }
-
-   .business-title > h2 {
-     font-size: 1.6rem;
-   }
-
-   h4 {
-     font-size: 1.2rem;
-   }
+    display: none !important;
+  }
+  .prev-button,
+  .next-button {
+    display: none !important;
   }
 
+  .started-button {
+    background-color: #fe5240;
+    color: #f7f7f7;
+    border-radius: 0%;
+    font-size: 1em;
+    width: 100%;
+    height: 55px;
+  }
+
+  .started-container {
+    padding: 0;
+  }
+  .navigation-btn {
+    margin: 0;
+    margin-top: 30px;
+  }
+
+  #slider {
+    height: 140px;
+  }
+
+  .box-wrapper {
+    background-color: #fff;
+  }
+
+  .business-title > h2 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+}
