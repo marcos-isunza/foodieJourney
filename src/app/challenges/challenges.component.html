@@ -6,8 +6,8 @@
         <a [routerLink]="['/businesses', 'burgers']" class="img-overlay-wrap">
           <img class="card-img-top" src="../../assets/01Boton.png" alt="">
           <svg viewBox="0 0 200 200">
-            <rect [attr.width]="challengeWidth" height="110" class="challenge-progress" />
-            <text id="perc" x="85" y="90" class="challenge-progress-text">{{challengeProgress}}%</text>
+            <rect [attr.width]="challengeWidthAmerican" height="110" class="challenge-progress" />
+            <text id="perc" x="85" y="90" class="challenge-progress-text">{{challengeProgressAmerican}}%</text>
           </svg>
         </a>
         <div class="card-body">
@@ -24,7 +24,8 @@
         <a [routerLink]="['/businesses', 'italian']" class="img-overlay-wrap">
           <img class="card-img-top" src="../../assets/02Boton.png" alt="">
           <svg viewBox="0 0 200 200">
-            <rect width="0" height="115" class="challenge-progress" />
+            <rect [attr.width]="challengeWidthItalian" height="110" class="challenge-progress" />
+            <text id="perc" x="85" y="90" class="challenge-progress-text">{{challengeProgressItalian}}%</text>
           </svg>
         </a>
         <div class="card-body">
@@ -41,7 +42,8 @@
         <a [routerLink]="['/businesses', 'mexican']" class="img-overlay-wrap">
           <img class="card-img-top" src="../../assets/03Boton.png" alt="">
           <svg viewBox="0 0 200 200">
-            <rect width="0" height="115" class="challenge-progress" />
+            <rect [attr.width]="challengeWidthMexican" height="110" class="challenge-progress" />
+            <text id="perc" x="85" y="90" class="challenge-progress-text">{{challengeProgressMexican}}%</text>
           </svg>
         </a>
         <div class="card-body">
@@ -58,7 +60,8 @@
         <a [routerLink]="['/businesses', 'japanese']" class="img-overlay-wrap">
           <img class="card-img-top" src="../../assets/04Boton.png" alt="">
           <svg viewBox="0 0 200 200">
-            <rect width="0" height="115" class="challenge-progress" />
+            <rect [attr.width]="challengeWidthJapanese" height="110" class="challenge-progress" />
+            <text id="perc" x="85" y="90" class="challenge-progress-text">{{challengeProgressJapanese}}%</text>
           </svg>
         </a>
         <div class="card-body">
@@ -75,7 +78,8 @@
         <a [routerLink]="['/businesses', 'korean']" class="img-overlay-wrap">
           <img class="card-img-top" src="../../assets/04Boton.png" alt="">
           <svg viewBox="0 0 200 200">
-            <rect width="0" height="115" class="challenge-progress" />
+            <rect [attr.width]="challengeWidthKorean" height="110" class="challenge-progress" />
+            <text id="perc" x="85" y="90" class="challenge-progress-text">{{challengeProgressKorean}}%</text>
           </svg>
         </a>
         <div class="card-body">
