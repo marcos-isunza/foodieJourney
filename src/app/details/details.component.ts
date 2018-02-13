@@ -5,14 +5,15 @@ import { Business } from '../business-interface';
 import { HttpClient } from '@angular/common/http';
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 
+
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-
-  constructor(private _businessService: YelpServiceComponent, private _route: ActivatedRoute, private _router: Router) {}
+  constructor(private _businessService: YelpServiceComponent, private _route: ActivatedRoute, private _router: Router,
+  private spinnerService: Ng4LoadingSpinnerService) {}
   display= 'none';
   hidden= 'block';
   btn_go1:boolean = true;
@@ -24,14 +25,7 @@ export class DetailsComponent implements OnInit {
   btn_started2:boolean = false;
   btn_started3:boolean = false;
   cambiarColor: string;
-
-  constructor(
-    private _businessService: YelpServiceComponent,
-    private _route: ActivatedRoute,
-    private _router: Router,
-    private spinnerService: Ng4LoadingSpinnerService
-  ) {}
-
+  cambiarColor2: string;
   businessObject = {};
   errorMessage: string;
   id = this._route.snapshot.paramMap.get('id');

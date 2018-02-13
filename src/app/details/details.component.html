@@ -11,7 +11,10 @@
 <ng4-loading-spinner [template]="template"> </ng4-loading-spinner>
 <div *ngIf="pageReady">
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 8e444a2b143a1d162e47ca3e80e8a266c19f5abe
 <div class="container box-wrapper">
   <div class="row box-container">
     <div class="col-md-6 business-title">
@@ -22,6 +25,36 @@
     </div>
     <div class="col-md-6">
       <button class="btn btn-light btn-lg feedback" *ngIf ="btn_started3">Leave Feedback</button>
+<<<<<<< HEAD
+  <!--div class="container box-wrapper">
+    <div class="row box-container">
+      <div class="col-md-6 business-title">
+        <span class="step">{{postNumber}}</span>
+        <h2>{{businessObject.name}}</h2>
+      </div>
+      <div class="col-md-6">
+        <button class="btn btn-light btn-lg feedback">Leave Feedback</button>
+      </div-->
+    </div>
+  </div>
+    <div class="row box-container">
+      <div class="col">
+        <div class="row">
+          <div class="col-6">
+            <div id="slider">
+              <figure>
+                <span *ngFor="let photo of businessObject.photos">
+                  <img src="{{(photo)?photo:defaultImage}}">
+                </span>
+              </figure>
+              <div class="text-block">
+                <h4>
+                  {{businessObject.name}}
+                </h4>
+                <pm-star [rating]='businessObject.rating'></pm-star>&nbsp;
+                <span class="rev-count">{{businessObject.review_count}} reviews</span>
+                <p>{{businessObject.price}}</p>
+=======
 
     </div>
 
@@ -43,6 +76,7 @@
               <pm-star [rating]='businessObject.rating'></pm-star>&nbsp;
               <span class="rev-count">{{businessObject.review_count}} reviews</span>
               <p>{{businessObject.price}}</p>
+>>>>>>> 8e444a2b143a1d162e47ca3e80e8a266c19f5abe
               </div>
 
             </div>
@@ -79,7 +113,10 @@
       </div>
     </div>
   </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 8e444a2b143a1d162e47ca3e80e8a266c19f5abe
 </div>
 <div class="container navigation-btn">
   <div class="row">
@@ -94,8 +131,21 @@
     <div class="col-md-3 text-center">
       <button id="singlebutton1" [disabled]="p_disabled" [ngStyle]="{'background-color':cambiarColor, 'color':cambiarColor2}" class="btn btn-light btn-lg next-button">Next</button>
       <!--button class="btn_style btn btn-default next-button2" *ngIf ="btn_next2">Next</button-->
+<<<<<<< HEAD
+  <!--div class="container navigation-btn">
+    <div class="row">
+      <div class="col-md-3 text-center">
+        <button id="singlebutton" name="singlebutton" class="btn btn-lg prev-button">Previous</button>
+      </div>
+      <div class=" col-md-6 text-center started-container ">
+        <button id="singlebutton " name="singlebutton " class="btn btn-lg marked started-button " (click)="setChallengeComplete(postNumber)">Mark as Started</button>
+      </div>
+      <div class="col-md-3 text-center ">
+        <button id="singlebutton " name="singlebutton " class="btn btn-light btn-lg next-button ">Next</button>
+      </div>
+=======
 
+>>>>>>> 8e444a2b143a1d162e47ca3e80e8a266c19f5abe
     </div>
-  </div>
-
+  </div-->
 </div>
