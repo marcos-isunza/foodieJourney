@@ -93,7 +93,7 @@ export class BusinessesComponent implements OnInit, OnChanges {
         break;
       }
       case  'korean': {
-        this.DescJournal = 'AUN NO HAY DESC';
+        this.DescJournal = 'Originating from ancient agricultural and nomadic traditions, Korean cuisine has evolved through a complex interaction of the natural environment and different cultural trends.';
         break;
       }
       case  'italian': {
@@ -106,46 +106,6 @@ export class BusinessesComponent implements OnInit, OnChanges {
       }
       case  'japanese': {
         this.DescJournal = 'In 2014, 14 restaurants in Tokio and Shonan maintain a Michelin three-stars raiting, the ultimate international recognition in the culinary world.';
-        break;
-      }
-    }
-  }
-
-
-  public f_click(id: number) {
-    switch (id) {
-      case 1: {
-        this.text_tittle = true;
-        this.TitleJournal = 'American';
-        this.DescJournal =
-          'One characteristic of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles';
-        console.log(this.text_tittle);
-        break;
-      }
-      case 2: {
-        this.text_tittle = true;
-        this.TitleJournal = 'Korean';
-        this.DescJournal =
-          'One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles';
-        break;
-      }
-      case 3: {
-        this.text_tittle = true;
-        this.TitleJournal = 'Italian';
-         break;
-      }
-      case 4: {
-        this.text_tittle = true;
-        this.TitleJournal = 'Mexican';
-        this.DescJournal =
-          'One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles';
-        break;
-      }
-      case 5: {
-        this.text_tittle = true;
-        this.TitleJournal = 'Japanese';
-        this.DescJournal =
-          'One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles';
         break;
       }
     }
