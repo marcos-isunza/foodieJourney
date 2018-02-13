@@ -20,6 +20,8 @@ export class AppComponent implements OnInit {
   title = 'app';
   display = 'none';
   logname = 'Log In';
+  sendTo = 'home';
+  isLogin: boolean = false;
   constructor(private _businessService: YelpServiceComponent) {}
 
   // business: Business[] = [];
@@ -38,6 +40,9 @@ export class AppComponent implements OnInit {
       this.display='none'; 
     }
   ngOnInit(): void {
+    // if(localStorage.getItem('login') == 'true'){
+    //  this.logname= 'Log Out';
+    // }
 
         //get Geolocation
     //     if (window.navigator && window.navigator.geolocation) {
@@ -63,14 +68,21 @@ closeNav() {
 }
 
 logout(){
-  this.logname= 'Log Out';
+  this.logname= 'Log In';
+  this.sendTo = 'challenges';
+  this.isLogin = false;
+  localStorage.setItem('login', 'false');
+
 }
 
-login(){
-  if(this.logname =='Log Out'){
-    this.logname= 'Log In';
-  }
+login(){        
+    this.sendTo = 'challenges';
+    this.logname= 'Log Out';
+    this.isLogin = true;
+    this.display = "none"
+    localStorage.setItem('login', 'true');
 }
+
 }
 
 // start(){
