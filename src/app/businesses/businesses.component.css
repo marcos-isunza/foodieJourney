@@ -78,6 +78,7 @@ body {
 
 .Challenge_name {
   font-size: 20px;
+  text-transform: uppercase;
 }
 
 .Challenge_desc {
