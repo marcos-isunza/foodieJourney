@@ -88,7 +88,7 @@ export class BusinessesComponent implements OnInit, OnChanges {
   }
   public f_title(title: string) {
     switch (title) {
-      case  'american': {
+      case  'burgers': {
         this.DescJournal = 'One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles';       
         break;
       }
