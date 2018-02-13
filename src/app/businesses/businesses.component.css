@@ -247,6 +247,10 @@ ngb-accordion .card {
   padding:30px !important;
 }
 
+.toLeft{
+  float: left;
+}
+
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
