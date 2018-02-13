@@ -18,8 +18,8 @@
 }
 
 .challenge-progress {
-  fill: rgb(221, 154, 154);
-  fill-opacity: 0.3;
+  fill:#fd513f;
+  fill-opacity: 0.8;
 }
 
 .img-overlay-wrap {
