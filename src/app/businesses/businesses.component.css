@@ -217,11 +217,12 @@ ngb-accordion .card {
 }
 
 .dropbtn {
-  background-color: #4caf50;
+  background-color: #fd513f;
   color: white;
-  padding: 16px;
+  padding: 7px;
   font-size: 16px;
   border: none;
+  width: 109px;
 }
 
 .dropdown {
@@ -233,9 +234,17 @@ ngb-accordion .card {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  min-width: 330% !important;
+  box-shadow: 0px 8px 16px 0px rgba(230, 226, 226, 0.2);
   z-index: 1;
+}
+
+.res_drop a{
+  width: 100%;
+  color: rgb(183, 185, 183) !important;
+  background-color: white;
+  margin: 0px !important;
+  padding:30px !important;
 }
 
 .dropdown-content a {
@@ -254,7 +263,7 @@ ngb-accordion .card {
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+  background-color:   #ac2727;
 }
 
 .orden{
