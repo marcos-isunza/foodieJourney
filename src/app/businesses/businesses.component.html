@@ -58,7 +58,13 @@
       <div class="row col-md-12 col-sm-12 col-12 acomodar">
         <div class="row col-md-6 col-sm-12 col-12">
           <div class="col-md-3 col-sm-3 col-3">
-            <label class="circle"></label>
+            <!-- <label class="circle"></label> -->
+            <div class="progress-circle progress-{{progress}}">
+              <span>{{progress}}</span>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 col-3">
+            <span class="progress">{{progress}}%</span>
           </div>
           <div class="col-md-9 col-sm-9 col-9">
             <p class="Challenge_name">{{TitleJournal}}</p>
