@@ -57,7 +57,20 @@ body {
   }
 }
 
-#perc{
+#perc {
   color: white;
   border: 3px solid green;
+}
+
+@media (min-width: 992px) {
+  .col-lg-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 20%;
+  }
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
 }

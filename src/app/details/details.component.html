@@ -8,16 +8,22 @@
     </div>
   </div>
 </div>
+<ng4-loading-spinner [template]="template"> </ng4-loading-spinner>
+<div *ngIf="pageReady">
 
 <div class="container box-wrapper">
   <div class="row box-container">
     <div class="col-md-6 business-title">
       <span class="step">1</span>
-      <h2>{{businessObject.name}}</h2>
+      <h3>{{businessObject.name}}
+      <span *ngIf ="btn_started1" class="letter1"> STARTED</span>
+      <span *ngIf ="btn_started2" class="letter2"> COMPLETED-</span></h3>
     </div>
     <div class="col-md-6">
-      <button class="btn btn-light btn-lg feedback">Leave Feedback</button>
+      <button class="btn btn-light btn-lg feedback" *ngIf ="btn_started3">Leave Feedback</button>
+
     </div>
+
   </div>
   <div class="row box-container">
     <div class="col">
@@ -36,35 +42,37 @@
               <pm-star [rating]='businessObject.rating'></pm-star>&nbsp;
               <span class="rev-count">{{businessObject.review_count}} reviews</span>
               <p>{{businessObject.price}}</p>
+              </div>
+
             </div>
           </div>
-        </div>
-        <div class="col-6">
-          <pm-map [latitude]='businessObject.coordinates.latitude' [longitude]='businessObject.coordinates.longitude' [label]='businessObject.name'></pm-map>
+          <div class="col-6">
+            <pm-map [latitude]='businessObject.coordinates.latitude' [longitude]='businessObject.coordinates.longitude' [label]='businessObject.name'></pm-map>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="row box-container">
-    <div class="col">
-      <div class="row">
-        <div class="col-md-9">
-          <p class="recipe-name">{{selectedRecipe.name}}</p>
-          <p class="recipe-desc">{{selectedRecipe.description}}</p>
-        </div>
-        <div class="col-md-3">
-          <div class="thumbnail business-info">
-            <p class="panel-open"> {{businessObject.is_closed | isOpen: businessObject.is_closed}}</p>
-            <hr>
-            <p class="panel-contact">
-              <i class="fa fa-phone">
-                <a href="tel:{{businessObject.display_phone}}">{{businessObject.display_phone}}</a>
-              </i>
-              <br>
-              <i class="fa fa-external-link">
-                <a href="{{businessObject.url}}" target="_blank">{{businessObject.name}} Yelp Link</a>
-              </i>
-            </p>
+    <div class="row box-container">
+      <div class="col">
+        <div class="row">
+          <div class="col-md-9">
+            <p class="recipe-name">{{selectedRecipe.name}}</p>
+            <p class="recipe-desc">{{selectedRecipe.description}}</p>
+          </div>
+          <div class="col-md-3">
+            <div class="thumbnail business-info">
+              <p class="panel-open"> {{businessObject.is_closed | isOpen: businessObject.is_closed}}</p>
+              <hr>
+              <p class="panel-contact">
+                <i class="fa fa-phone">
+                  <a href="tel:{{businessObject.display_phone}}">{{businessObject.display_phone}}</a>
+                </i>
+                <br>
+                <i class="fa fa-external-link">
+                  <a href="{{businessObject.url}}" target="_blank">{{businessObject.name}} Yelp Link</a>
+                </i>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -74,14 +82,27 @@
 <div class="container navigation-btn">
   <div class="row">
     <div class="col-md-3 text-center">
-      <button id="singlebutton" name="singlebutton" class="btn btn-lg prev-button">Previous</button>
+      <button id="singlebutton2" [disabled]="p_disabled1" class="btn btn-lg prev-button" >Previous</button>
     </div>
-    <div class="col-md-6 text-center started-container">
-      <button id="singlebutton" name="singlebutton" class="btn btn-lg marked started-button">Mark as Started</button>
+    <div class="col-md-6 text-center">
+      <button id="singlebutton" (click)='hideMark(1)' *ngIf ="btn_go1" class="btn btn-lg marked started-button">Mark as Started</button>
+      <button class="btn_style btn btn-default continue-button" (click)="hideMark(2)" *ngIf ="btn_go2">Mark as Completed</button>
+      <button class="btn_style btn btn-default go-button" (click)="hideMark(3)" *ngIf ="btn_go3">Way to go! Take the next challenge</button>
     </div>
     <div class="col-md-3 text-center">
-      <button id="singlebutton" name="singlebutton" class="btn btn-light btn-lg next-button">Next</button>
+      <button id="singlebutton1" [disabled]="p_disabled" [ngStyle]="{'background-color':cambiarColor, 'color':cambiarColor2}" class="btn btn-light btn-lg next-button">Next</button>
+      <!--button class="btn_style btn btn-default next-button2" *ngIf ="btn_next2">Next</button-->
+  <!--div class="container navigation-btn">
+    <div class="row">
+      <div class="col-md-3 text-center">
+        <button id="singlebutton" name="singlebutton" class="btn btn-lg prev-button">Previous</button>
+      </div>
+      <div class=" col-md-6 text-center started-container ">
+        <button id="singlebutton " name="singlebutton " class="btn btn-lg marked started-button " (click)="setChallengeComplete(postNumber)">Mark as Started</button>
+      </div>
+      <div class="col-md-3 text-center ">
+        <button id="singlebutton " name="singlebutton " class="btn btn-light btn-lg next-button ">Next</button>
+      </div>
     </div>
-  </div>
-</div>  
-
+  </div-->
+</div>
