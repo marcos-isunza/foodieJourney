@@ -26,24 +26,24 @@
       <button class="btn btn-light btn-lg feedback" (click)="open()" *ngIf ="btn_started3">Leave Feedback</button>
     </div>
 
-  </div>
-  <div class="row box-container">
-    <div class="col">
-      <div class="row">
-        <div class="col-6">
-          <div id="slider">
-            <figure>
-              <span *ngFor="let photo of businessObject.photos">
-                <img src="{{photo}}">
-              </span>
-            </figure>
-            <div class="text-block">
-              <h4>
-                {{businessObject.name}}
-              </h4>
-              <pm-star [rating]='businessObject.rating'></pm-star>&nbsp;
-              <span class="rev-count">{{businessObject.review_count}} reviews</span>
-              <p>{{businessObject.price}}</p>
+    </div>
+    <div class="row box-container">
+      <div class="col">
+        <div class="row">
+          <div class="col-6">
+            <div id="slider">
+              <figure>
+                <span *ngFor="let photo of businessObject.photos">
+                  <img src="{{photo}}">
+                </span>
+              </figure>
+              <div class="text-block">
+                <h4>
+                  {{businessObject.name}}
+                </h4>
+                <pm-star [rating]='businessObject.rating'></pm-star>&nbsp;
+                <span class="rev-count">{{businessObject.review_count}} reviews</span>
+                <p>{{businessObject.price}}</p>
               </div>
 
             </div>
@@ -84,7 +84,7 @@
 <div class="container navigation-btn">
   <div class="row">
     <div class="col-md-3 text-center">
-      <button id="singlebutton2" [disabled]="p_disabled1" class="btn btn-lg prev-button" >Previous</button>
+      <button id="singlebutton2" [disabled]="p_disabled1" class="btn btn-lg prev-button">Previous</button>
     </div>
     <div class="col-md-6 text-center">
       <button id="singlebutton" (click)='hideMark(1)' *ngIf ="btn_go1" class="btn btn-lg marked started-button">Mark as Started</button>
@@ -118,3 +118,4 @@
       </div><!-- /.modal-content -->  
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal !-->
+    
