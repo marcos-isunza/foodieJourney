@@ -13,7 +13,7 @@ import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 })
 export class DetailsComponent implements OnInit {
   constructor(private _businessService: YelpServiceComponent, private _route: ActivatedRoute, private _router: Router,
-    private spinnerService: Ng4LoadingSpinnerService) {}
+  private spinnerService: Ng4LoadingSpinnerService) {}
   display= 'none';
   hidden= 'block';
   btn_go1:boolean = true;
