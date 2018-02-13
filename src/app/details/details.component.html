@@ -11,37 +11,38 @@
 <ng4-loading-spinner [template]="template"> </ng4-loading-spinner>
 <div *ngIf="pageReady">
 
-<div class="container box-wrapper">
-  <div class="row box-container">
-    <div class="col-md-6 business-title">
-      <span class="step">1</span>
-      <h3>{{businessObject.name}}
-      <span *ngIf ="btn_started1" class="letter1"> STARTED</span>
-      <span *ngIf ="btn_started2" class="letter2"> COMPLETED-</span></h3>
-    </div>
-    <div class="col-md-6">
-      <button class="btn btn-light btn-lg feedback" *ngIf ="btn_started3">Leave Feedback</button>
+  <div class="container box-wrapper">
+    <div class="row box-container">
+      <div class="col-md-6 business-title">
+        <span class="step">1</span>
+        <h3>{{businessObject.name}}
+          <span *ngIf="btn_started1" class="letter1"> STARTED</span>
+          <span *ngIf="btn_started2" class="letter2"> COMPLETED-</span>
+        </h3>
+      </div>
+      <div class="col-md-6">
+        <button class="btn btn-light btn-lg feedback" *ngIf="btn_started3">Leave Feedback</button>
+
+      </div>
 
     </div>
-
-  </div>
-  <div class="row box-container">
-    <div class="col">
-      <div class="row">
-        <div class="col-6">
-          <div id="slider">
-            <figure>
-              <span *ngFor="let photo of businessObject.photos">
-                <img src="{{photo}}">
-              </span>
-            </figure>
-            <div class="text-block">
-              <h4>
-                {{businessObject.name}}
-              </h4>
-              <pm-star [rating]='businessObject.rating'></pm-star>&nbsp;
-              <span class="rev-count">{{businessObject.review_count}} reviews</span>
-              <p>{{businessObject.price}}</p>
+    <div class="row box-container">
+      <div class="col">
+        <div class="row">
+          <div class="col-6">
+            <div id="slider">
+              <figure>
+                <span *ngFor="let photo of businessObject.photos">
+                  <img src="{{photo}}">
+                </span>
+              </figure>
+              <div class="text-block">
+                <h4>
+                  {{businessObject.name}}
+                </h4>
+                <pm-star [rating]='businessObject.rating'></pm-star>&nbsp;
+                <span class="rev-count">{{businessObject.review_count}} reviews</span>
+                <p>{{businessObject.price}}</p>
               </div>
 
             </div>
@@ -82,27 +83,13 @@
 <div class="container navigation-btn">
   <div class="row">
     <div class="col-md-3 text-center">
-      <button id="singlebutton2" [disabled]="p_disabled1" class="btn btn-lg prev-button" >Previous</button>
+      <button id="singlebutton2" [disabled]="p_disabled1" class="btn btn-lg prev-button">Previous</button>
     </div>
     <div class="col-md-6 text-center">
-      <button id="singlebutton" (click)='hideMark(1)' *ngIf ="btn_go1" class="btn btn-lg marked started-button">Mark as Started</button>
-      <button class="btn_style btn btn-default continue-button" (click)="hideMark(2)" *ngIf ="btn_go2">Mark as Completed</button>
-      <button class="btn_style btn btn-default go-button" (click)="hideMark(3)" *ngIf ="btn_go3">Way to go! Take the next challenge</button>
+      <button id="singlebutton" (click)='hideMark(1)' *ngIf="btn_go1" class="btn btn-lg marked started-button">Mark as Started</button>
+      <button class="btn_style btn btn-default continue-button" (click)="hideMark(2)" *ngIf="btn_go2">Mark as Completed</button>
+      <button class="btn_style btn btn-default go-button" (click)="hideMark(3)" *ngIf="btn_go3">Way to go! Take the next challenge</button>
     </div>
     <div class="col-md-3 text-center">
       <button id="singlebutton1" [disabled]="p_disabled" [ngStyle]="{'background-color':cambiarColor, 'color':cambiarColor2}" class="btn btn-light btn-lg next-button">Next</button>
-      <!--button class="btn_style btn btn-default next-button2" *ngIf ="btn_next2">Next</button-->
-  <!--div class="container navigation-btn">
-    <div class="row">
-      <div class="col-md-3 text-center">
-        <button id="singlebutton" name="singlebutton" class="btn btn-lg prev-button">Previous</button>
-      </div>
-      <div class=" col-md-6 text-center started-container ">
-        <button id="singlebutton " name="singlebutton " class="btn btn-lg marked started-button " (click)="setChallengeComplete(postNumber)">Mark as Started</button>
-      </div>
-      <div class="col-md-3 text-center ">
-        <button id="singlebutton " name="singlebutton " class="btn btn-light btn-lg next-button ">Next</button>
-      </div>
     </div>
-  </div-->
-</div>
