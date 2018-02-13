@@ -69,7 +69,7 @@
 
       <div class="row col-md-12 col-sm-12 col-12 acomodar">
         <div class="row col-md-6 col-sm-12 col-12">
-          <div class="col-md-3 col-sm-3 col-3">
+          <div class="col-md-3 col-sm-3 col-5">
             <!-- <label class="circle"></label> -->
             <div class="progress-circle progress-{{progress}}">
               <span>
@@ -77,10 +77,8 @@
               </span>
             </div>
           </div>
-          <div class="col-md-9 col-sm-9 col-9">
-            <p class="Challenge_name">{{TitleJournal}}
-              <span class="progress">{{progress}}%</span>
-            </p>
+          <div class="col-md-9 col-sm-9 col-7">
+            <p class="Challenge_name">{{TitleJournal}} <span class="progress">{{progress}}%</span></p>
             <p class="Challenge_desc">{{DescJournal}}
             </p>
           </div>
@@ -88,7 +86,7 @@
         <div class="row col-md-6 col-sm-12 col-12">
           <div class="col-md-8 col-sm-0 col-0"></div>
           <div class="col-md-4 col-sm-6 col-12">
-            <button class="btnDure btn btn-default ">Duration: 3 weeks</button>
+            <button class="btnDure btn btn-default ">Duration: 3 weeks </button>
           </div>
           <div class="col-md-8 col-sm-0 col-0"></div>
           <div class="col-md-4 col-sm-6 col-12">
@@ -130,12 +128,12 @@
               </p>
             </div>
           </div>
-          <div class="col">
+          <div class="col imgCol">
             <div class="thumb-post">
               <img src="{{business.image_url}}" alt="{{business.name}}" />
             </div>
           </div>
-          <div class="col">
+          <div class="col mapCol">
             <pm-map [latitude]='business.coordinates.latitude' [longitude]='business.coordinates.longitude' [label]='business.name'></pm-map>
           </div>
           <div class="col-1">
