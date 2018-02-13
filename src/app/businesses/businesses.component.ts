@@ -11,8 +11,8 @@ import { NgbTabsetConfig } from '@ng-bootstrap/ng-bootstrap';
   providers: [NgbTabsetConfig]
 })
 export class BusinessesComponent implements OnInit, OnChanges {
-  TitleJournal;
-  DescJournal;
+  
+  DescJournal:string;
   text_tittle: boolean;
   constructor(
     private _businessService: YelpServiceComponent,
@@ -26,8 +26,10 @@ export class BusinessesComponent implements OnInit, OnChanges {
   display = 'none';
   hidden = 'block';
   address: string;
+  title:string;
   p_disabled: boolean = false;
-
+  testcolor: string;
+  testTrue: boolean = true;
   business: Business[] = [];
   errorMessage: string;
   geolocationPosition = {};
@@ -38,6 +40,7 @@ export class BusinessesComponent implements OnInit, OnChanges {
   checkmark: string;
 
   category = this._route.snapshot.paramMap.get('ctg');
+  TitleJournal: string = this.category;
 
   getTotalProgress() {
     if (this.category == 'burgers') {
@@ -94,7 +97,10 @@ export class BusinessesComponent implements OnInit, OnChanges {
             }, error => (this.errorMessage = <any>error));
       }, error => (this.errorMessage = <any>error));
     }
+
     this.getTotalProgress();
+    this.testCond(this.testTrue);
+    this.f_title(this.category);
   }
 
   myFunction() {
@@ -105,46 +111,41 @@ export class BusinessesComponent implements OnInit, OnChanges {
       x.className = 'topnav';
     }
   }
+  public testCond (testTrue){
+    if(testTrue == false){
+      this.testcolor= 'gray';
+    }
+    else{
+
+    this.testcolor= '#2cb2ff';
+    }
+  }
+  
   public hide() {
     this.display = 'block';
     this.hidden = 'none';
+    console.log(this.category);
   }
-  public f_click(id: number) {
-    switch (id) {
-      case 1: {
-        this.text_tittle = true;
-        this.TitleJournal = 'American';
-        this.DescJournal =
-          'One characteristic of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles';
-        console.log(this.text_tittle);
+  public f_title(title: string) {
+    switch (title) {
+      case  'burgers': {
+        this.DescJournal = 'One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles';       
         break;
       }
-      case 2: {
-        this.text_tittle = true;
-        this.TitleJournal = 'Korean';
-        this.DescJournal =
-          'One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles';
+      case  'korean': {
+        this.DescJournal = 'Originating from ancient agricultural and nomadic traditions, Korean cuisine has evolved through a complex interaction of the natural environment and different cultural trends.';
         break;
       }
-      case 3: {
-        this.text_tittle = true;
-        this.TitleJournal = 'Italian';
-        this.DescJournal =
-          'One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles';
+      case  'italian': {
+        this.DescJournal = 'An Italian meal is famous for its structure into several sections: the appetiser, pasta or rice dish, a meat course and dolce dessert.';
         break;
       }
-      case 4: {
-        this.text_tittle = true;
-        this.TitleJournal = 'Mexican';
-        this.DescJournal =
-          'One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles';
+      case  'mexican': {
+        this.DescJournal = 'Known for its varied flavours and spices, the food of Mexico is a result of the Spanish conquistadores interactio with the Aztec culture.';
         break;
       }
-      case 5: {
-        this.text_tittle = true;
-        this.TitleJournal = 'Japanese';
-        this.DescJournal =
-          'One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles';
+      case  'japanese': {
+        this.DescJournal = 'In 2014, 14 restaurants in Tokio and Shonan maintain a Michelin three-stars raiting, the ultimate international recognition in the culinary world.';
         break;
       }
     }

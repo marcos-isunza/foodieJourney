@@ -36,10 +36,6 @@ body {
   animation: 9s slider infinite;
 }
 
-#slider figure:hover {
-  /*animation-play-state: paused; enable for pause on hover*/
-}
-
 #slider figure img {
   width: 33.333333333%;
   height: 350px;
@@ -113,8 +109,13 @@ body {
 
 .feedback {
   float: right;
-  font-size: 16px;
   padding: 10px;
+  border-radius: 0%;
+  font-size: 1em;
+  width: 50%;
+  height: 55px;
+  border: 3px solid #d1d9e0;
+  background-color: white;
 }
 .nav-dts {
   margin: 30px 0px;
@@ -140,7 +141,6 @@ span.step {
   text-align: center;
   width: 1.6em;
   font-size: 1.5em;
-  float:left;
 }
 
 .recipe-name {
@@ -181,8 +181,33 @@ span.step {
   height: 55px;
 }
 
-.feedback {
-  visibility: hidden;
+
+.continue-button{
+  background-color: #2cb2ff;
+  color: #f2f2f2;
+  border-radius: 0%;
+  font-size: 1em;
+  width: 100%;
+  height: 55px;
+}
+
+.go-button{
+  
+  color: #4a4a4a;
+  border-radius: 0%;
+  font-size: 1em;
+  width: 100%;
+  height: 55px;
+}
+
+.letter1{
+  font-size: small;
+  color: #d1d9e0;
+}
+
+.letter2{
+  font-size: small;
+  color: #d1d9e0;
 }
 
 /* Styles added by Edgar for mobile */

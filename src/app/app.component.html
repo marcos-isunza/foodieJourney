@@ -27,22 +27,22 @@
 <hr> -->
   <!-- Odal Inicio -->
 <!--The content below is only a placeholder and can be replaced.-->
-<div id= "main">
+<div id="main">
     <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-        <a href="/team">About</a>
-      </div>
-<nav class="navbar">
-  <div class="container-fluid">
-    <div class="navbar-header">
-        <span style="font-size:20px;cursor:pointer" (click)="openNav()">&#9776;</span>
-      <a class="links navbar-brand" href="home">FoodieJournal</a>
-    </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a class="links" (click)="open();login()"><span class="glyphicon glyphicon-user"></span>{{logname}}</a></li>
-    </ul>
-  </div>
-</nav>
+      <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+      <a href="/team">About</a>
+    </div>    
+    <nav class="navbar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+              <span style="font-size:20px;cursor:pointer" (click)="openNav()">&#9776;</span>
+            <a class="links navbar-brand" href="home">FoodieJournal</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="links" (click)="open();login()"><span class="glyphicon glyphicon-user"></span>{{logname}}</a></li>
+          </ul>
+        </div>
+      </nav>
 <!--Login Modal-->
 <div class="backdrop" [ngStyle]="{'display':display}"></div>
 <div class="modal" tabindex="-1" role="dialog" id="modal"  [ngStyle]="{'display':display}">    
@@ -68,6 +68,7 @@
       </div><!-- /.modal-content -->  
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal !-->
+
 
 
 <router-outlet></router-outlet>
