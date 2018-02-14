@@ -27,13 +27,25 @@
         <div class="selectResp toLeft">
           <div class=""></div>
           <div class="dropdown .selectResp d-inline-block">
-            <button class="dropbtn">Journeys  <i class="fa fa-sort-desc" aria-hidden="true"></i></button>
+            <button class="dropbtn">Journeys
+              <i class="fa fa-sort-desc" aria-hidden="true"></i>
+            </button>
             <div class="dropdown-content">
-              <div class="res_drop"><a href="businesses/burgers" class="active">American</a></div>
-              <div class="res_drop"><a href="businesses/korean">Korean</a></div>
-              <div class="res_drop"><a href="businesses/italian">Italian</a></div>
-              <div class="res_drop"><a href="businesses/mexican">Mexican</a></div>
-              <div class="res_drop"><a href="businesses/japanese">Japanese</a></div>
+              <div class="res_drop">
+                <a href="businesses/burgers" class="active">American</a>
+              </div>
+              <div class="res_drop">
+                <a href="businesses/korean">Korean</a>
+              </div>
+              <div class="res_drop">
+                <a href="businesses/italian">Italian</a>
+              </div>
+              <div class="res_drop">
+                <a href="businesses/mexican">Mexican</a>
+              </div>
+              <div class="res_drop">
+                <a href="businesses/japanese">Japanese</a>
+              </div>
             </div>
           </div>
         </div>
@@ -60,7 +72,9 @@
           <div class="col-md-3 col-sm-3 col-5">
             <!-- <label class="circle"></label> -->
             <div class="progress-circle progress-{{progress}}">
-              <span>{{progress}}</span>
+              <span>
+                <!-- <img src="{{imageProgress}}"> -->
+              </span>
             </div>
           </div>
           <div class="col-md-9 col-sm-9 col-7">
@@ -92,7 +106,7 @@
     <ngb-panel id="{{'static-'+i}}" *ngFor="let business of business.businesses; let i= index">
       <ng-template ngbPanelTitle>
         <span>
-          <div (click)='testCond()'  [ngStyle]="{'background-color':testcolor}" class="orden">{{(testTrue)?'✓':i+1}} </div> {{ business.name}}</span>
+          <div (click)='testCond()' [ngStyle]="{'background-color':testcolor}" class="orden">{{(testTrue)?'✓':i+1}} </div> {{ business.name}}</span>
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="row">

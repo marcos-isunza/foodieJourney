@@ -11,8 +11,7 @@ import { NgbTabsetConfig } from '@ng-bootstrap/ng-bootstrap';
   providers: [NgbTabsetConfig]
 })
 export class BusinessesComponent implements OnInit, OnChanges {
-  
-  DescJournal:string;
+  DescJournal: string;
   text_tittle: boolean;
   constructor(
     private _businessService: YelpServiceComponent,
@@ -26,10 +25,10 @@ export class BusinessesComponent implements OnInit, OnChanges {
   display = 'none';
   hidden = 'block';
   address: string;
-  title:string;
+  title: string;
   p_disabled: boolean = false;
   testcolor: string;
-  testTrue: boolean = true;
+  testTrue: boolean = false;
   business: Business[] = [];
   errorMessage: string;
   geolocationPosition = {};
@@ -38,6 +37,7 @@ export class BusinessesComponent implements OnInit, OnChanges {
   progress = 0;
   isComplete1italian = false;
   checkmark: string;
+  imageProgress: string;
 
   category = this._route.snapshot.paramMap.get('ctg');
   TitleJournal: string = this.category;
@@ -45,18 +45,23 @@ export class BusinessesComponent implements OnInit, OnChanges {
   getTotalProgress() {
     if (this.category == 'burgers') {
       this.progress = +localStorage.getItem('totalProgressAmerican');
+      this.imageProgress = '../../assets/burgers.png';
     }
     if (this.category == 'italian') {
       this.progress = +localStorage.getItem('totalProgressItalian');
+      this.imageProgress = '../../assets/italian.png';
     }
     if (this.category == 'japanese') {
       this.progress = +localStorage.getItem('totalProgressJapanese');
+      this.imageProgress = '../../assets/japanese.png';
     }
     if (this.category == 'korean') {
       this.progress = +localStorage.getItem('totalProgressKorean');
+      this.imageProgress = '../../assets/korean.png';
     }
     if (this.category == 'mexican') {
       this.progress = +localStorage.getItem('totalProgressMexican');
+      this.imageProgress = '../../assets/mexican.png';
     }
   }
 
@@ -111,16 +116,14 @@ export class BusinessesComponent implements OnInit, OnChanges {
       x.className = 'topnav';
     }
   }
-  public testCond (testTrue){
-    if(testTrue == false){
-      this.testcolor= 'gray';
-    }
-    else{
-
-    this.testcolor= '#2cb2ff';
+  public testCond(testTrue) {
+    if (testTrue == false) {
+      this.testcolor = 'gray';
+    } else {
+      this.testcolor = '#2cb2ff';
     }
   }
-  
+
   public hide() {
     this.display = 'block';
     this.hidden = 'none';
@@ -128,24 +131,29 @@ export class BusinessesComponent implements OnInit, OnChanges {
   }
   public f_title(title: string) {
     switch (title) {
-      case  'burgers': {
-        this.DescJournal = 'One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles';       
+      case 'burgers': {
+        this.DescJournal =
+          'One characteristics of America cooking is the fusion of multiple ethnic or regional approaches into completely new cooking styles';
         break;
       }
-      case  'korean': {
-        this.DescJournal = 'Originating from ancient agricultural and nomadic traditions, Korean cuisine has evolved through a complex interaction of the natural environment and different cultural trends.';
+      case 'korean': {
+        this.DescJournal =
+          'Originating from ancient agricultural and nomadic traditions, Korean cuisine has evolved through a complex interaction of the natural environment and different cultural trends.';
         break;
       }
-      case  'italian': {
-        this.DescJournal = 'An Italian meal is famous for its structure into several sections: the appetiser, pasta or rice dish, a meat course and dolce dessert.';
+      case 'italian': {
+        this.DescJournal =
+          'An Italian meal is famous for its structure into several sections: the appetiser, pasta or rice dish, a meat course and dolce dessert.';
         break;
       }
-      case  'mexican': {
-        this.DescJournal = 'Known for its varied flavours and spices, the food of Mexico is a result of the Spanish conquistadores interactio with the Aztec culture.';
+      case 'mexican': {
+        this.DescJournal =
+          'Known for its varied flavours and spices, the food of Mexico is a result of the Spanish conquistadores interactio with the Aztec culture.';
         break;
       }
-      case  'japanese': {
-        this.DescJournal = 'In 2014, 14 restaurants in Tokio and Shonan maintain a Michelin three-stars raiting, the ultimate international recognition in the culinary world.';
+      case 'japanese': {
+        this.DescJournal =
+          'In 2014, 14 restaurants in Tokio and Shonan maintain a Michelin three-stars raiting, the ultimate international recognition in the culinary world.';
         break;
       }
     }
