@@ -11,22 +11,20 @@ import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-  constructor(
-    private _businessService: YelpServiceComponent,
-    private _route: ActivatedRoute,
-    private _router: Router,
-    private spinnerService: Ng4LoadingSpinnerService
-  ) {}
-  display = 'none';
-  hidden = 'block';
-  btn_go1: boolean = true;
-  btn_go2: boolean = false;
-  btn_go3: boolean = false;
-  p_disabled: boolean = true;
-  p_disabled1: boolean = true;
-  btn_started1: boolean = false;
-  btn_started2: boolean = false;
-  btn_started3: boolean = false;
+  constructor(private _businessService: YelpServiceComponent, private _route: ActivatedRoute, private _router: Router,
+  private spinnerService: Ng4LoadingSpinnerService) {}
+  display= 'none';
+  hidden= 'block';
+  btn_go1:boolean = true;
+  btn_go2:boolean= false;
+  btn_go3:boolean= false;
+  p_disabled:boolean = true;
+  p_disabled1:boolean = true;
+  btn_started1:boolean = false;
+  btn_started2:boolean = false;
+  btn_started3:boolean = false;
+  testcolor2: string;
+  testTrue: boolean = true;
   cambiarColor: string;
   cambiarColor2: string;
   businessObject = {};
@@ -98,8 +96,10 @@ export class DetailsComponent implements OnInit {
       this.setTimer();
     }, error => (this.errorMessage = <any>error));
   }
-  public hideMark(id: number) {
-    switch (id) {
+  ///////////
+  ////////////
+  public hideMark(id: number){
+    switch (id){
       case 1: {
         this.btn_go1 = false;
         this.btn_go2 = true;
@@ -118,8 +118,11 @@ export class DetailsComponent implements OnInit {
         this.btn_started3 = true;
         this.cambiarColor = '#2cb2ff';
         this.cambiarColor2 = '#f2f2f2';
-        this.setChallengeComplete(this.postNumber);
+        this.hidden ='none' ;
+        this.display = 'block';
         break;
+        /*this.setChallengeComplete(this.postNumber);
+        break;*/
       }
     }
   }
