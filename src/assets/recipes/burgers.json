@@ -1,26 +1,26 @@
 [
     {
-      "name": "Extra cheese burguer",
+      "name": "Extra-Cheese Burger",
       "description":
-        "Special veg burguer with Aallo Patty and cheese slice. Vegetable cabbage, tomato and onion. Sauces: Mayonnaise, tomato. "
+        "Special veggie burger with Aallo Patty and a cheese slice. Vegetable cabbage, tomato and onion. Sauces: Mayonnaise, tomato. "
     },
     {
-      "name": "Classic chicken wings",
+      "name": "Classic Chicken Wings",
       "description":
-        "Wings are served with your choice of blew cheese, ranch, or lite ranch dressing on the side."
+        "Wings are served with your choice of blue cheese, ranch, or lite ranch dressing on the side."
     },
     {
-      "name": "Meatball sandwich",
+      "name": "Meatball Sandwich",
       "description":
-         "Three large green will classic meatballs with marinara sauce. Topped with mozzarolla and parmesan on a toasted sor dough hoagie. "
+         "Three large classic meatballs with marinara sauce. Topped with mozzarella and parmesan on a toasted sour dough hoagie. "
     },
     {
-      "name": "Coconut chicken fingers",
+      "name": "Coconut Chicken Fingers",
       "description":
-        "Chichen tenders with creole mustard mayo or plum sauce."
+        "Chicken tenders fried in a coconut coating with creole mustard mayo or plum sauce and a side of green lime beans."
     },
     {
-      "name": "Hooters boneless chicken wings",
+      "name": "Supreme Boneless Chicken Wings",
       "description":
         "Go boneless with easy to eat 100% breast meat. More chicken, less bone, lots of flavor."
     }

@@ -41,6 +41,7 @@ export class BusinessesComponent implements OnInit, OnChanges {
 
   category = this._route.snapshot.paramMap.get('ctg');
   TitleJournal: string = this.category;
+  bimage: string = 'url("../../assets/' + this.TitleJournal + '.png")';
 
   getTotalProgress() {
     if (this.category == 'burgers') {
