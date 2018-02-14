@@ -14,10 +14,9 @@
 <div class="container box-wrapper">
   <div class="row box-container">
     <div class="col-md-6 business-title">
-        
-            <span><div  class="cambio step" [ngStyle]="{'display':display}">{{(testTrue)?'?':i+1}} </div></span>
-           
-       <h3><span class="step" [ngStyle]="{'display':hidden}" >1</span>
+          
+      <h3><span><div  class="step2" [ngStyle]="{'display':display}">{{(testTrue)?'✓':i+1}} </div></span>
+      <span class="step" [ngStyle]="{'display':hidden}" >1</span>
       {{businessObject.name}}
       <span *ngIf ="btn_started1" class="letter1"> STARTED</span>
       <span *ngIf ="btn_started2" class="letter2"> COMPLETED</span></h3>
@@ -94,9 +93,9 @@
     <div class="col-md-3 text-center">
       <button id="singlebutton1" [disabled]="p_disabled" [ngStyle]="{'background-color':cambiarColor, 'color':cambiarColor2}" class="btn btn-light btn-lg next-button">Next</button>
       <!--button class="btn_style btn btn-default next-button2" *ngIf ="btn_next2">Next</button-->
-
+    </div>
 </div>
-
+</div>
 <!--MODAL FEEDBACK LORENA-->
 <div class="backdrop" [ngStyle]="{'display':display}"></div>
 <div class="modal" tabindex="-1" role="dialog" id="modal"  [ngStyle]="{'display':display}">    
