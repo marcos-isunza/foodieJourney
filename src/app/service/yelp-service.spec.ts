@@ -5,27 +5,21 @@ import {
   getTestBed,
   ComponentFixture
 } from '@angular/core/testing';
-import { DetailsComponent } from './details.component';
-import { YelpServiceComponent } from '../service/yelp-service';
+import { YelpServiceComponent } from './yelp-service';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
-import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
+import { MouseEvent } from '@agm/core';
 
 export class YelpServiceComponentMock {}
 describe('AppComponent', () => {
-  let component: DetailsComponent;
-  let fixture: ComponentFixture<DetailsComponent>;
+  let component: YelpServiceComponent;
+  let fixture: ComponentFixture<YelpServiceComponent>;
 
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        declarations: [DetailsComponent],
-        imports: [
-          RouterTestingModule,
-          HttpClientModule,
-          HttpModule,
-          Ng4LoadingSpinnerService
-        ],
+        declarations: [YelpServiceComponent],
+        imports: [RouterTestingModule, HttpClientModule, HttpModule],
         providers: [
           { provide: YelpServiceComponent, useClass: YelpServiceComponentMock }
         ]
@@ -34,7 +28,7 @@ describe('AppComponent', () => {
   );
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DetailsComponent);
+    fixture = TestBed.createComponent(YelpServiceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

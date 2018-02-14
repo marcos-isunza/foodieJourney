@@ -46,6 +46,14 @@ export class DetailsComponent implements OnInit {
     this.selectedRecipe = this.allRecipes[index];
     console.log(this.selectedRecipe);
   }
+  //modal
+  open() {
+    this.display = 'block';
+  }
+  onCloseHandled() {
+    this.display = 'none';
+  }
+  //modal
 
   setTimer() {
     this.currentTimeout = window.setTimeout(() => {
@@ -74,6 +82,7 @@ export class DetailsComponent implements OnInit {
       default:
         break;
     }
+    localStorage.setItem('testTrue', 'true');
   }
 
   ngOnInit() {

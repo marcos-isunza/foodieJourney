@@ -255,3 +255,97 @@ span.step {
     font-size: 1.2rem;
   }
 }
+
+No Title
+/*MODAL*/
+#bluecheck {
+  width: 16px;
+  height: 16px;
+}
+
+.modal {
+  position: center;
+  top: 16%;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  text-align: center;
+}
+
+.modal-header {
+  padding-top: 3%;
+  margin-top: 3%;
+  width: 100%;
+  font-size: 120%;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+.feedback_text {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 3%;
+}
+
+.modal_body {
+  width: auto;
+  height: 100%;
+  padding: 5%;
+  font-size: 15px;
+  margin: auto;
+}
+
+.inl {
+  display: inline-block;
+  color: #fd513f;
+}
+
+.modal-content {
+  height: auto;
+  border-radius: 0%;
+  font-size: 15px;
+  margin: auto;
+}
+
+.modal-header {
+  padding: 3%;
+  border: none;
+}
+
+#blanco {
+  color: white;
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1em;
+  color: #f0bf21;
+  font-size: 2em;
+}
+
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+  content: '\2605';
+  position: absolute;
+}
+
+#btn_feedback {
+  width: 50%;
+  height: 55px;
+  text-align: center;
+  padding: 1%;
+  background-color: #fd513f;
+  border-radius: 0;
+  border-style: none;
+  color: white;
+  font-size: 16px;
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}

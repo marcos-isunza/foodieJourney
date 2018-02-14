@@ -1,74 +1,58 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<!-- <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Nerby Business according to your location</h2>
-<p>latitide: {{geolocationPosition.latitude}}</p>
-<p>longitude: {{geolocationPosition.longitude}}</p>
-
-<div class="list-group " *ngFor="let business of business.businesses;">
-  <a class="list-group-item active">
-    <p>{{business.name}}</p>
-    <p>{{business.display_phone}}</p>
-    <p>{{business.price}}</p>
-    <p>{{business.rating}} - {{business.review_count}}</p>
-    <p>{{business.is_closed | isOpen: business.is_closed}}</p>
-    <p>{{business.location.display_address[0]}}, {{business.location.display_address[1]}}, {{business.location.display_address[2]}}</p>
-    <img src="{{business.image_url}}" width="250px" />
-    <p>
-      <a href="{{business.url}}" target="_blank">{{business.name}}</a>
-    </p>
-    <pm-map [latitude]='business.coordinates.latitude' [longitude]='business.coordinates.longitude' [label]='business.name'></pm-map>
-  </a>
-</div>
-<hr> -->
-  <!-- Odal Inicio -->
-<!--The content below is only a placeholder and can be replaced.-->
 <div id="main">
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-        <a href="/team">About</a>
-      </div>
-<nav class="navbar">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="links navbar-brand" href="home">FoodieJournal</a>
-    </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a class="links" (click)="open();" *ngIf="!isLogin"><span class="glyphicon glyphicon-user"></span>{{logname}}</a></li>
-      <li><a class="links" (click)="logout();" *ngIf="isLogin" [routerLink]="['/home']"><span class="glyphicon glyphicon-user"></span>{{logname}}</a></li>
-    </ul>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <a href="/team">About</a>
   </div>
-</nav>
-<!--Login Modal-->
-<div class="backdrop" [ngStyle]="{'display':display}"></div>
-<div class="modal" tabindex="-1" role="dialog" id="modal"  [ngStyle]="{'display':display}">    
-  <div class="modal-dialog modal-sm" role="document">   
-    <div class="modal-content">    
-      <div class="modal-header">
-        <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+  <nav class="navbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span style="font-size:20px;cursor:pointer"  (click)="openNav()">&#9776;</span>
+          <a class="links navbar-brand" href="home">FoodieJournal</a>
       </div>
-      <div class="modal-body text-center">
-        <input class="login_in" placeholder="Email or Username" type="email"><br>
-        <input class="login_in" placeholder="Password" type="password">
-        <button id="btn_login" (click)="login();" [routerLink]="['/challenges']" >Log In</button>
-      </div>
-      
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a class="links" (click)="open();" *ngIf="!isLogin">
+            <span class="glyphicon glyphicon-user"></span>{{logname}}</a>
+        </li>
+        <li>
+          <a class="links" (click)="logout();" *ngIf="isLogin" [routerLink]="['/home']">
+            <span class="glyphicon glyphicon-user"></span>{{logname}}</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--Login Modal-->
+  <div class="backdrop" [ngStyle]="{'display':display}"></div>
+  <div class="modal" tabindex="-1" role="dialog" id="modal" [ngStyle]="{'display':display}">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <input class="login_in" placeholder="Email or Username" type="email">
+          <br>
+          <input class="login_in" placeholder="Password" type="password">
+          <button id="btn_login" (click)="login();" [routerLink]="['/challenges']">Log In</button>
+        </div>
+
         <span id="or">or log in with</span>
 
-      <div class="redes">
-        <button type="button" class="twitter" id="twitter" aria-label="twitter"></button>
-        <button type="button" class="twitter" id="facebook" aria-label="twitter"></button>
-        <button type="button" class="twitter" id="google" aria-label="twitter"></button>
+        <div class="redes">
+          <button type="button" class="twitter" id="twitter" aria-label="twitter"></button>
+          <button type="button" class="twitter" id="facebook" aria-label="twitter"></button>
+          <button type="button" class="twitter" id="google" aria-label="twitter"></button>
+        </div>
+        <br>
       </div>
-      <br>
-      </div><!-- /.modal-content -->  
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal !-->
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal !-->
 
 
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
