@@ -39,8 +39,7 @@
       <a class="links navbar-brand" href="home">FoodieJournal</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      <li><a class="links" (click)="open();" *ngIf="!isLogin"><span class="glyphicon glyphicon-user"></span>{{logname}}</a></li>
-      <li><a class="links" (click)="logout();" *ngIf="isLogin" [routerLink]="['/home']"><span class="glyphicon glyphicon-user"></span>{{logname}}</a></li>
+      <li><a class="links" (click)="open();login()"><span class="glyphicon glyphicon-user"></span>{{logname}}</a></li>
     </ul>
   </div>
 </nav>
