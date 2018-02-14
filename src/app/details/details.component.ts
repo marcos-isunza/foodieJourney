@@ -5,7 +5,6 @@ import { Business } from '../business-interface';
 import { HttpClient } from '@angular/common/http';
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 
-
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
@@ -39,6 +38,15 @@ export class DetailsComponent implements OnInit {
   currentTimeout: number;
   defaultImage = '../../assets/no-image.jpg';
   template: string = `<img src="http://pa1.narvii.com/5722/2c617cd9674417d272084884b61e4bb7dd5f0b15_hq.gif" />`;
+  
+  //modal
+  open() {
+    this.display='block'; 
+  }
+  onCloseHandled(){
+    this.display='none'; 
+  }
+  //modal
 
   selectRandomRecipe() {
     let index = Math.floor(Math.random() * this.allRecipes.length + 1);
@@ -56,19 +64,19 @@ export class DetailsComponent implements OnInit {
   setChallengeComplete(challenge) {
     switch (challenge) {
       case 1:
-        localStorage.setItem('challenge1', 'true');
+        localStorage.setItem('challenge1-' + this.category, 'true');
         break;
       case 2:
-        localStorage.setItem('challenge2', 'true');
+        localStorage.setItem('challenge2-' + this.category, 'true');
         break;
       case 3:
-        localStorage.setItem('challenge3', 'true');
+        localStorage.setItem('challenge3-' + this.category, 'true');
         break;
       case 4:
-        localStorage.setItem('challenge4', 'true');
+        localStorage.setItem('challenge4-' + this.category, 'true');
         break;
       case 5:
-        localStorage.setItem('challenge5', 'true');
+        localStorage.setItem('challenge5-' + this.category, 'true');
         break;
       default:
         break;
@@ -96,24 +104,26 @@ export class DetailsComponent implements OnInit {
         this.btn_go1 = false;
         this.btn_go2 = true;
         this.btn_go3 = false;
-        this.btn_started1  = true;
+        this.btn_started1 = true;
         break;
       }
-      
+
       case 2: {
         this.btn_go1 = false;
         this.btn_go2 = false;
         this.btn_go3 = true;
         this.p_disabled = false;
-        this.btn_started1  = false;
-        this.btn_started2  = true;
+        this.btn_started1 = false;
+        this.btn_started2 = true;
         this.btn_started3 = true;
         this.cambiarColor = '#2cb2ff';
         this.cambiarColor2 = '#f2f2f2';
         this.hidden ='none' ;
         this.display = 'block';
         break;
+        /*this.setChallengeComplete(this.postNumber);
+        break;*/
       }
+    }
   }
-  }
-  }
+}
