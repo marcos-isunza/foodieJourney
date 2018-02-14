@@ -24,6 +24,8 @@ export class DetailsComponent implements OnInit {
   btn_started1:boolean = false;
   btn_started2:boolean = false;
   btn_started3:boolean = false;
+  testcolor2: string;
+  testTrue: boolean = true;
   cambiarColor: string;
   cambiarColor2: string;
   businessObject = {};
@@ -86,6 +88,8 @@ export class DetailsComponent implements OnInit {
       this.setTimer();
     }, error => (this.errorMessage = <any>error));
   }
+  ///////////
+  ////////////
   public hideMark(id: number){
     switch (id){
       case 1: {
@@ -105,7 +109,9 @@ export class DetailsComponent implements OnInit {
         this.btn_started2  = true;
         this.btn_started3 = true;
         this.cambiarColor = '#2cb2ff';
-        this.cambiarColor2 = '#f2f2f2'
+        this.cambiarColor2 = '#f2f2f2';
+        this.hidden ='none' ;
+        this.display = 'block';
         break;
       }
   }
