@@ -1,11 +1,11 @@
 [
   {
-    "name": "Squids in Tomato Sauce and Red Wine",
+    "name": "Squids in tomato sauce and red wine",
     "description":
-      "Use your favorite tomato sauce or spaghetti. This dish can be served as a side dish, appetizer or pasta, a recipe of Italian origin."
+      "Use your favorite tomato sauce or spaghetti, this dish can be served as a side dish, appetizer or pasta, a recipe of Italian origin."
   },
   {
-    "name": "Home-made Gnocchi",
+    "name": "Home gnocchi",
     "description":
       "An Italian pasta whose main ingredient is potatoes, enjoy them with your favorite Italian sauce."
   },
@@ -22,6 +22,6 @@
   {
     "name": "Lasagna with spinach and feta cheese",
     "description":
-      "Absolutely delicious! This lasagna (or cannelloni, if you prefer) of spinach and feta cheese is a house favorite."
+      "Absolutely delicious! This lasagna (or cannelloni, if you prefer) of spinach and feta cheese is quick to make."
   }
 ]
