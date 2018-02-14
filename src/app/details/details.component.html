@@ -14,34 +14,36 @@
 <div class="container box-wrapper">
   <div class="row box-container">
     <div class="col-md-6 business-title">
-      <span class="step">1</span>
-      <h3>{{businessObject.name}}
+        
+            <span><div  class="cambio step" [ngStyle]="{'display':display}">{{(testTrue)?'?':i+1}} </div></span>
+           
+       <h3><span class="step" [ngStyle]="{'display':hidden}" >1</span>
+      {{businessObject.name}}
       <span *ngIf ="btn_started1" class="letter1"> STARTED</span>
-      <span *ngIf ="btn_started2" class="letter2"> COMPLETED-</span></h3>
+      <span *ngIf ="btn_started2" class="letter2"> COMPLETED</span></h3>
     </div>
     <div class="col-md-6">
-      <button class="btn btn-light btn-lg feedback" *ngIf ="btn_started3">Leave Feedback</button>
-
+      <button class="btn btn-light btn-lg feedback" (click)="open()" *ngIf ="btn_started3">Leave Feedback</button>
     </div>
 
-  </div>
-  <div class="row box-container">
-    <div class="col">
-      <div class="row">
-        <div class="col-6">
-          <div id="slider">
-            <figure>
-              <span *ngFor="let photo of businessObject.photos">
-                <img src="{{photo}}">
-              </span>
-            </figure>
-            <div class="text-block">
-              <h4>
-                {{businessObject.name}}
-              </h4>
-              <pm-star [rating]='businessObject.rating'></pm-star>&nbsp;
-              <span class="rev-count">{{businessObject.review_count}} reviews</span>
-              <p>{{businessObject.price}}</p>
+    </div>
+    <div class="row box-container">
+      <div class="col">
+        <div class="row">
+          <div class="col-6">
+            <div id="slider">
+              <figure>
+                <span *ngFor="let photo of businessObject.photos">
+                  <img src="{{photo}}">
+                </span>
+              </figure>
+              <div class="text-block">
+                <h4>
+                  {{businessObject.name}}
+                </h4>
+                <pm-star [rating]='businessObject.rating'></pm-star>&nbsp;
+                <span class="rev-count">{{businessObject.review_count}} reviews</span>
+                <p>{{businessObject.price}}</p>
               </div>
 
             </div>
@@ -82,27 +84,38 @@
 <div class="container navigation-btn">
   <div class="row">
     <div class="col-md-3 text-center">
-      <button id="singlebutton2" [disabled]="p_disabled1" class="btn btn-lg prev-button" >Previous</button>
+      <button id="singlebutton2" [disabled]="p_disabled1" class="btn btn-lg prev-button">Previous</button>
     </div>
     <div class="col-md-6 text-center">
       <button id="singlebutton" (click)='hideMark(1)' *ngIf ="btn_go1" class="btn btn-lg marked started-button">Mark as Started</button>
       <button class="btn_style btn btn-default continue-button" (click)="hideMark(2)" *ngIf ="btn_go2">Mark as Completed</button>
-      <button class="btn_style btn btn-default go-button" (click)="hideMark(3)" *ngIf ="btn_go3">Way to go! Take the next challenge</button>
+      <button class="btn_style btn btn-default go-button" (click)="hideMark(3)" *ngIf ="btn_go3"><img id="bluecheck" src="../../assets/check.png"> Way to go! Take the next challenge</button>
     </div>
     <div class="col-md-3 text-center">
       <button id="singlebutton1" [disabled]="p_disabled" [ngStyle]="{'background-color':cambiarColor, 'color':cambiarColor2}" class="btn btn-light btn-lg next-button">Next</button>
       <!--button class="btn_style btn btn-default next-button2" *ngIf ="btn_next2">Next</button-->
-  <!--div class="container navigation-btn">
-    <div class="row">
-      <div class="col-md-3 text-center">
-        <button id="singlebutton" name="singlebutton" class="btn btn-lg prev-button">Previous</button>
-      </div>
-      <div class=" col-md-6 text-center started-container ">
-        <button id="singlebutton " name="singlebutton " class="btn btn-lg marked started-button " (click)="setChallengeComplete(postNumber)">Mark as Started</button>
-      </div>
-      <div class="col-md-3 text-center ">
-        <button id="singlebutton " name="singlebutton " class="btn btn-light btn-lg next-button ">Next</button>
-      </div>
-    </div>
-  </div-->
+
 </div>
+
+<!--MODAL FEEDBACK LORENA-->
+<div class="backdrop" [ngStyle]="{'display':display}"></div>
+<div class="modal" tabindex="-1" role="dialog" id="modal"  [ngStyle]="{'display':display}">    
+  <div class="modal-dialog modal-md" role="document">   
+    <div class="modal-content">    
+      <div class="modal-header">Tell us what you thought of<i id="blanco">_</i><i class="inl">{{businessObject.name}}</i>
+        <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+      </div>  
+      <div class="modal-body text-center">
+        <textarea class="feedback_text" name="feedback" rows="5" placeholder="Write your feedback"></textarea>  
+        <!-- <input class="feedback_text" placeholder="Write your feedback" type="text"><br> -->
+        <br>
+        Rate this restaurant
+        <div class="rating">
+          <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+          </div>
+        <button id="btn_feedback" (click)="onCloseHandled()">Send Feedback</button>
+      </div>
+      </div><!-- /.modal-content -->  
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal !-->
+    

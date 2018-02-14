@@ -27,13 +27,25 @@
         <div class="selectResp toLeft">
           <div class=""></div>
           <div class="dropdown .selectResp d-inline-block">
-            <button class="dropbtn">Journeys  <i class="fa fa-sort-desc" aria-hidden="true"></i></button>
+            <button class="dropbtn">Journeys
+              <i class="fa fa-sort-desc" aria-hidden="true"></i>
+            </button>
             <div class="dropdown-content">
-              <div class="res_drop"><a href="businesses/burgers" class="active">American</a></div>
-              <div class="res_drop"><a href="businesses/korean">Korean</a></div>
-              <div class="res_drop"><a href="businesses/italian">Italian</a></div>
-              <div class="res_drop"><a href="businesses/mexican">Mexican</a></div>
-              <div class="res_drop"><a href="businesses/japanese">Japanese</a></div>
+              <div class="res_drop">
+                <a href="businesses/burgers" class="active">American</a>
+              </div>
+              <div class="res_drop">
+                <a href="businesses/korean">Korean</a>
+              </div>
+              <div class="res_drop">
+                <a href="businesses/italian">Italian</a>
+              </div>
+              <div class="res_drop">
+                <a href="businesses/mexican">Mexican</a>
+              </div>
+              <div class="res_drop">
+                <a href="businesses/japanese">Japanese</a>
+              </div>
             </div>
           </div>
         </div>
@@ -57,13 +69,15 @@
 
       <div class="row col-md-12 col-sm-12 col-12 acomodar">
         <div class="row col-md-6 col-sm-12 col-12">
-          <div class="col-md-3 col-sm-3 col-3">
+          <div class="col-md-3 col-sm-3 col-5">
             <!-- <label class="circle"></label> -->
             <div class="progress-circle progress-{{progress}}">
-              <span>{{progress}}</span>
+              <span>
+                <!-- <img src="{{imageProgress}}"> -->
+              </span>
             </div>
           </div>
-          <div class="col-md-9 col-sm-9 col-9">
+          <div class="col-md-9 col-sm-9 col-7">
             <p class="Challenge_name">{{TitleJournal}} <span class="progress">{{progress}}%</span></p>
             <p class="Challenge_desc">{{DescJournal}}
             </p>
@@ -72,7 +86,7 @@
         <div class="row col-md-6 col-sm-12 col-12">
           <div class="col-md-8 col-sm-0 col-0"></div>
           <div class="col-md-4 col-sm-6 col-12">
-            <button class="btnDure btn btn-default ">Duration: 3 weeks</button>
+            <button class="btnDure btn btn-default ">Duration: 3 weeks </button>
           </div>
           <div class="col-md-8 col-sm-0 col-0"></div>
           <div class="col-md-4 col-sm-6 col-12">
@@ -92,7 +106,7 @@
     <ngb-panel id="{{'static-'+i}}" *ngFor="let business of business.businesses; let i= index">
       <ng-template ngbPanelTitle>
         <span>
-          <div (click)='testCond()'  [ngStyle]="{'background-color':testcolor}" class="orden">{{(testTrue)?'✓':i+1}} </div> {{ business.name}}</span>
+          <div (click)='testCond()' [ngStyle]="{'background-color':testcolor}" class="orden">{{(testTrue)?'✓':i+1}} </div> {{ business.name}}</span>
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="row">
@@ -114,12 +128,12 @@
               </p>
             </div>
           </div>
-          <div class="col">
+          <div class="col imgCol">
             <div class="thumb-post">
               <img src="{{business.image_url}}" alt="{{business.name}}" />
             </div>
           </div>
-          <div class="col">
+          <div class="col mapCol">
             <pm-map [latitude]='business.coordinates.latitude' [longitude]='business.coordinates.longitude' [label]='business.name'></pm-map>
           </div>
           <div class="col-1">
