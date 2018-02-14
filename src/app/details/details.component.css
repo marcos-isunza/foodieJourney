@@ -36,10 +36,6 @@ body {
   animation: 9s slider infinite;
 }
 
-#slider figure:hover {
-  /*animation-play-state: paused; enable for pause on hover*/
-}
-
 #slider figure img {
   width: 33.333333333%;
   height: 350px;
@@ -113,8 +109,13 @@ body {
 
 .feedback {
   float: right;
-  font-size: 16px;
   padding: 10px;
+  border-radius: 0%;
+  font-size: 1em;
+  width: 50%;
+  height: 55px;
+  border: 3px solid #d1d9e0;
+  background-color: white;
 }
 .nav-dts {
   margin: 30px 0px;
@@ -127,20 +128,27 @@ body {
   color: #fe5240;
   font-style: bolder;
 }
-span.step {
-  background: #5a5959;
-  border-radius: 0.8em;
-  -moz-border-radius: 0.8em;
-  -webkit-border-radius: 0.8em;
+.step2{
+  background: #2cb2ff;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
   color: #ffffff;
-  display: inline-block;
-  font-weight: normal;
-  line-height: 1.6em;
   margin-right: 5px;
   text-align: center;
-  width: 1.6em;
-  font-size: 1.5em;
-  float:left;
+  width: 46px;
+  height: 50px;
+}
+.step {
+  background: #5a5959;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  color: #ffffff;
+  margin-right: 5px;
+  text-align: center;
+  width: 46px;
+  height: 50px;
 }
 
 .recipe-name {
@@ -181,8 +189,33 @@ span.step {
   height: 55px;
 }
 
-.feedback {
-  visibility: hidden;
+
+.continue-button{
+  background-color: #2cb2ff;
+  color: #f2f2f2;
+  border-radius: 0%;
+  font-size: 1em;
+  width: 100%;
+  height: 55px;
+}
+
+.go-button{
+  
+  color: #4a4a4a;
+  border-radius: 0%;
+  font-size: 1em;
+  width: 100%;
+  height: 55px;
+}
+
+.letter1{
+  font-size: small;
+  color: #d1d9e0;
+}
+
+.letter2{
+  font-size: small;
+  color: #d1d9e0;
 }
 
 /* Styles added by Edgar for mobile */
@@ -227,4 +260,90 @@ span.step {
      font-size: 1.2rem;
    }
   }
+  /*MODAL*/ 
+
+.modal {
+  position: center;
+  top: 16%;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  text-align: center;
+} 
+
+.modal-header{
+  padding-top: 3%;
+  margin-top: 3%;
+  width: 100%;
+  font-size: 120%;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+.feedback_text{
+  height: 100%;
+  width: 100%;
+  margin-bottom: 3%;
+}
+
+.modal_body{
+  width: auto;
+  height: 100%;
+  padding: 5%;
+  font-size: 15px; 
+  margin:auto;
+}
+
+.inl{
+  display: inline-block;
+  color: #fd513f;
+}
+.modal-content{
+  height: auto;
+  border-radius: 0%;
+  font-size: 15px; 
+  margin: auto;
+}
+
+.modal-header{
+  padding: 3%;
+  border: none;
+}
+
+#blanco{
+  color: white;
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1em;
+  color: #f0bf21;
+  font-size: 2em;
+}
+
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+
+#btn_feedback{
+  width: 50%;
+  height: 55px;
+  text-align: center;
+  padding: 1%;
+  background-color: #fd513f;
+  border-radius: 0;
+  border-style: none;
+  color: white;
+  font-size: 16px;
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
 
