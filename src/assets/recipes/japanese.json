@@ -2,17 +2,17 @@
     {
       "name": "Tenmusubi",
       "description":
-        "Is a tye of onigiri (rice ball) made with a salt-seasoned shrimp tempura as a filling."
+        "A type of onigiri (rice ball) made with a salt-seasoned shrimp tempura as a filling. Rice portion on the side."
     },
     {
-      "name": "Sushi",
+      "name": "California Sushi Roll",
       "description":
         "Using untraditional ingredients such as avocado, cheese or fried shrimp, international versions of sushi continue to envolve in a unique way to reflect local characteristics."
     },
     {
-      "name": "Shirodashi pork amen",
+      "name": "Shirodashi Pork Ramen",
       "description":
-        "slow cooked pork belly marinated in bulgogi sauce served with noodles in a rich chicken broth with dashi and miso. topped with seasonal greens, scallions, wakame, menma and half a tea-stained egg "
+        "Slow cooked pork belly marinated in bulgogi sauce served with noodles in a rich chicken broth with dashi and miso. topped with seasonal greens, scallions, wakame, menma and half a tea-stained egg "
     },
     {
       "name": "Yaki-tori",
