@@ -41,6 +41,7 @@ export class BusinessesComponent implements OnInit, OnChanges {
 
   category = this._route.snapshot.paramMap.get('ctg');
   TitleJournal: string = this.category;
+  bimage: string = 'url("../../assets/' + this.TitleJournal + '.png")';
 
   getTotalProgress() {
     if (this.category == 'burgers') {
@@ -104,8 +105,9 @@ export class BusinessesComponent implements OnInit, OnChanges {
     }
 
     this.getTotalProgress();
-    this.testCond(this.testTrue);
     this.f_title(this.category);
+    this.testCond();
+    localStorage.setItem('testTrue', 'false');
   }
 
   myFunction() {
@@ -116,14 +118,14 @@ export class BusinessesComponent implements OnInit, OnChanges {
       x.className = 'topnav';
     }
   }
-  public testCond(testTrue) {
-    if (testTrue == false) {
+
+  public testCond() {
+    if (localStorage.getItem('testTrue') == 'false') {
       this.testcolor = 'gray';
     } else {
       this.testcolor = '#2cb2ff';
     }
   }
-
   public hide() {
     this.display = 'block';
     this.hidden = 'none';

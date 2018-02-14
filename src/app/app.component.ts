@@ -1,14 +1,7 @@
-import {
-  Business
-} from './business-interface';
-import {
-  Component,
-  OnInit
-} from '@angular/core';
-import {
-  YelpServiceComponent
-} from './service/yelp-service';
-
+import { Business } from './business-interface';
+import { Component, OnInit } from '@angular/core';
+import { YelpServiceComponent } from './service/yelp-service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -24,73 +17,38 @@ export class AppComponent implements OnInit {
   isLogin: boolean = false;
   constructor(private _businessService: YelpServiceComponent) {}
 
-  // business: Business[] = [];
-  // errorMessage: string;
-
-  // geolocationPosition = {};
-  // category = 'Mexican';
-  handle_prueba(){
-    console.log("Hola");
-  
+  open() {
+    this.display = 'block';
   }
-    open() {
-      this.display='block'; 
-    }
-    onCloseHandled(){
-      this.display='none'; 
-    }
-  ngOnInit(): void {
-    // if(localStorage.getItem('login') == 'true'){
-    //  this.logname= 'Log Out';
-    // }
+  onCloseHandled() {
+    this.display = 'none';
+  }
+  ngOnInit(): void {}
 
-        //get Geolocation
-    //     if (window.navigator && window.navigator.geolocation) {
-    //     window.navigator.geolocation.getCurrentPosition(
-    //         position => {
-    //             this.geolocationPosition = position.coords,
-    //                 console.log(position.coords);
-    //                 this._businessService.getBusinessByLocation(this.geolocationPosition, this.category)
-    //                 .subscribe(business => {
-    //                   this.business = business;
-    //                 },
-    //                 error => this.errorMessage = < any > error);
-    //                 ;
-    //         },
-    //         error => this.errorMessage = < any > error);
-
-    // }
-
+  openNav() {
+    document.getElementById('mySidenav').style.width = '150px';
+    document.getElementById('main').style.marginLeft = '150px';
   }
 
-openNav() {
-  document.getElementById("mySidenav").style.width = "150px";
-  document.getElementById("main").style.marginLeft = "150px";
-}
-  
-closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-}
+  closeNav() {
+    document.getElementById('mySidenav').style.width = '0';
+    document.getElementById('main').style.marginLeft = '0';
+  }
 
-
-
-logout(){
-  this.logname= 'Log In';
-  this.sendTo = 'challenges';
-  this.isLogin = false;
-  localStorage.setItem('login', 'false');
-
-}
-
-login(){        
+  logout() {
+    this.logname = 'Log In';
     this.sendTo = 'challenges';
-    this.logname= 'Log Out';
-    this.isLogin = true;
-    this.display = "none"
-    localStorage.setItem('login', 'true');
-}
+    this.isLogin = false;
+    localStorage.setItem('login', 'false');
+  }
 
+  login() {
+    this.sendTo = 'challenges';
+    this.logname = 'Log Out';
+    this.isLogin = true;
+    this.display = 'none';
+    localStorage.setItem('login', 'true');
+  }
 }
 
 // start(){

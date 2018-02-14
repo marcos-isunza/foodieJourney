@@ -5,22 +5,22 @@
         "Flour tortilla loaded with shredded beef and topped with chile con queso. Served with fresh guacamole."
     },
     {
-      "name": "Chile relleno",
+      "name": "Chile Relleno",
       "description":
         "Chile pepper stuffed with cheese or shredded beef, then topped with ranchera sauce or chile con queso"
     },
     {
-      "name": "Huevos rancheros",
+      "name": "Huevos Rancheros",
       "description":
         "Two cheese enchiladas with chile con carne topped with two eggs. Served with ranchera sauce."
     },
     {
-      "name": "Charro beans",
+      "name": "Charro Beans",
       "description":
         "Pinto beans, expertly seasoned with spices, bacon and pico de gallo."
     },
     {
-      "name": "Carnitas tacos",
+      "name": "Carnitas Tacos",
       "description":
         "Marinated pork with mixed cheeses, lettuce and tomatoes, with cilantro onion relish on the side."
     }
