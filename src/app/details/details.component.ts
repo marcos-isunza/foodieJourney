@@ -40,21 +40,7 @@ export class DetailsComponent implements OnInit {
   currentTimeout: number;
   defaultImage = '../../assets/no-image.jpg';
   template: string = `<img src="http://pa1.narvii.com/5722/2c617cd9674417d272084884b61e4bb7dd5f0b15_hq.gif" />`;
-  
-  //modal
-  open() {
-    this.display='block'; 
-  }
-  onCloseHandled(){
-    this.display='none'; 
-  }
-  //modal
 
-  selectRandomRecipe() {
-    let index = Math.floor(Math.random() * this.allRecipes.length + 1);
-    this.selectedRecipe = this.allRecipes[index];
-    console.log(this.selectedRecipe);
-  }
   //modal
   open() {
     this.display = 'block';
@@ -63,6 +49,12 @@ export class DetailsComponent implements OnInit {
     this.display = 'none';
   }
   //modal
+
+  selectRandomRecipe() {
+    let index = Math.floor(Math.random() * this.allRecipes.length + 1);
+    this.selectedRecipe = this.allRecipes[index];
+    console.log(this.selectedRecipe);
+  }
 
   setTimer() {
     this.currentTimeout = window.setTimeout(() => {
