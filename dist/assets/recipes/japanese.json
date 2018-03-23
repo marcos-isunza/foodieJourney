@@ -1,0 +1,27 @@
+[
+    {
+      "name": "Tenmusubi",
+      "description":
+        "A type of onigiri (rice ball) made with a salt-seasoned shrimp tempura as a filling. Rice portion on the side."
+    },
+    {
+      "name": "California Sushi Roll",
+      "description":
+        "Using untraditional ingredients such as avocado, cheese or fried shrimp, international versions of sushi continue to envolve in a unique way to reflect local characteristics."
+    },
+    {
+      "name": "Shirodashi Pork Ramen",
+      "description":
+        "Slow cooked pork belly marinated in bulgogi sauce served with noodles in a rich chicken broth with dashi and miso. topped with seasonal greens, scallions, wakame, menma and half a tea-stained egg "
+    },
+    {
+      "name": "Yaki-tori",
+      "description":
+        "Broiled chicken on skewers with sweet sauce."
+    },
+    {
+      "name": "Sunomono",
+      "description":
+        "Chilled vinegar-dressed cucumber salad with octopus or combination of octopus and squid."
+    }
+  ]
