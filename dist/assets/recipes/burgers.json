@@ -1,0 +1,27 @@
+[
+    {
+      "name": "Extra-Cheese Burger",
+      "description":
+        "Special veggie burger with Aallo Patty and a cheese slice. Vegetable cabbage, tomato and onion. Sauces: Mayonnaise, tomato. "
+    },
+    {
+      "name": "Classic Chicken Wings",
+      "description":
+        "Wings are served with your choice of blue cheese, ranch, or lite ranch dressing on the side."
+    },
+    {
+      "name": "Meatball Sandwich",
+      "description":
+         "Three large classic meatballs with marinara sauce. Topped with mozzarella and parmesan on a toasted sour dough hoagie. "
+    },
+    {
+      "name": "Coconut Chicken Fingers",
+      "description":
+        "Chicken tenders fried in a coconut coating with creole mustard mayo or plum sauce and a side of green lime beans."
+    },
+    {
+      "name": "Supreme Boneless Chicken Wings",
+      "description":
+        "Go boneless with easy to eat 100% breast meat. More chicken, less bone, lots of flavor."
+    }
+  ]

@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Squids in Tomato Sauce and Red Wine",
+    "description":
+      "Use your favorite tomato sauce or spaghetti. This dish can be served as a side dish, appetizer or pasta, a recipe of Italian origin."
+  },
+  {
+    "name": "Home-made Gnocchi",
+    "description":
+      "An Italian pasta whose main ingredient is potatoes, enjoy them with your favorite Italian sauce."
+  },
+  {
+    "name": "Spaghetti Bolognese",
+    "description":
+      "The Bolognese sauce of this dish has, in addition to the traditional ingredients, bacon and chopped mushrooms."
+  },
+  {
+    "name": "Spaghetti with garlic and olive oil",
+    "description":
+      "Simply spaghetti with garlic and olive oil, served with a parmesan cheese and a touch of chili."
+  },
+  {
+    "name": "Lasagna with spinach and feta cheese",
+    "description":
+      "Absolutely delicious! This lasagna (or cannelloni, if you prefer) of spinach and feta cheese is a house favorite."
+  }
+]
